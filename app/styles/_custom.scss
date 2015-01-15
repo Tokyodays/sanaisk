@@ -1,0 +1,54 @@
+@charset "utf-8";
+@import "variable";
+
+@font-face {
+	font-family: mplus-2p-regular;
+	src: url('http://mplus-fonts.sourceforge.jp/webfonts/mplus-2p-regular.ttf') format("truetype");
+}
+body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6  {
+  font-family: AxisStd-Regular, mplus-2p-regular, _sans_selif;
+  text-shadow:0px 0px 1px rgba(150,150,150,.2);
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+#navigation {
+  opacity: 0;
+}
+.carousel {
+  margin: 0;
+  height: 500px;
+}
+.carousel-inner {
+  height: 100%;
+  .item {
+    height: 100%;
+  }
+}
+#product div.thumbnail {
+	margin-bottom: 30px;
+}
+#access {
+	margin: 0 auto;
+	.googlemaps {
+		position: relative;
+		padding-bottom: 28.125%;
+		height: 0;
+		overflow: hidden;
+		> iframe,
+		> object,
+		> embed {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100% !important;
+			height: 100% !important;
+			border: 0;
+		}
+	}
+
+}
