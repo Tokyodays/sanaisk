@@ -68,6 +68,19 @@ gulp.task('fonts', function () {
         .pipe($.size());
 });
 
+gulp.task('Iconfont', function(){
+  gulp.src(['app/icons/*.svg'])
+    .pipe(iconfont({
+      fontName: 'sanaifont', // required
+      appendCodepoints: true // recommended option
+    }))
+      .on('codepoints', function(codepoints, options) {
+        // CSS templating, e.g.
+        console.log(codepoints, options);
+      })
+    .pipe(gulp.dest('app/styles/fonts/'));
+});
+
 gulp.task('clean', function () {
     return gulp.src(['app/styles/main.css', 'dist'], { read: false }).pipe($.clean());
 });
@@ -110,10 +123,10 @@ gulp.task('wiredep', function () {
 });
 
 gulp.task('watch', ['serve'], function () {
- 
+
     // watch for changes
     gulp.watch(['app/*.html'], reload);
- 
+
     gulp.watch('app/styles/**/*.scss', ['styles']);
     gulp.watch('app/scripts/**/*.js', ['scripts']);
     gulp.watch('app/images/**/*', ['images']);
