@@ -1,7 +1,6 @@
 @charset "utf-8";
 
-@import "mixins";
-@import "variable";
+
 
 body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6  {
   font-family:"游明朝体", "Yu Mincho", YuMincho, _sans_selif;
@@ -23,6 +22,13 @@ a:hover {
 }
 #navigation {
   opacity: 1;
+  .icon-facebook-square:before,
+  .icon-twitter-square:before,
+  .icon-linkedin-square:before,
+  .icon-mark:before {
+    font-size: 20px;
+    color: $color_main;
+  }
 }
 #product div.thumbnail {
 	margin-bottom: 30px;
@@ -379,7 +385,7 @@ contents
 h1.title {
 	border-left: 5px solid $color_main;
 	padding-left: 15px;
-	margin-bottom: 30px;
+	margin-bottom: 60px;
 }
 h2.title,
 h3.title {
@@ -408,6 +414,7 @@ h3.title {
 		}
 	}
 	h2 {
+    margin-bottom: 20px;
 		> span {
 			color: $color_complementary;
 		}
@@ -422,30 +429,47 @@ section {
 }
 section#president {
 	.dl-horizontal dt {
-		width: 200px;
-		img {
-			width: 100%;
-			height: auto;
-		}
 	}
 	.dl-horizontal dd {
-		margin-left: 220px;
 		font-size: 16px;
 		line-height: 1.5;
 	}
+  @media (min-width: 768px){
+  	.dl-horizontal dt {
+  		width: 200px;
+  		img {
+  			width: 100%;
+  			height: auto;
+  		}
+  	}
+  	.dl-horizontal dd {
+  		margin-left: 220px;
+  	}
+  }
 
 }
+section#company {
+  ul.nav {
+    margin-bottom: 30px;
+  }
+  .nav-tabs > li > a {
+    font-size: 18px;
+  }
+}
+
 footer {
-	padding: 40px 0 10px;
+	padding: 30px 0 10px;
 	background-color: lighten($color_second2, 30%);
+  line-height: 1.5;
 	h2.title,
 	h3.title {
+    margin-bottom: 30px;
 	}
 	.copyright {
 		font-size: 16px;
-		border-top: 1px solid $color_second1;
+		border-top: 1px dotted $color_main;
 		padding: 10px 0;
-		margin-top: 10px;
+		margin-top: 30px;
 	}
 }
 
@@ -485,7 +509,7 @@ Portfolio
 	display: block;
 	position: absolute;
 	z-index: 20;
-	background: rgba(100, 194, 158, 0.8);
+	background: rgba($color_main, 0.5);
 	overflow: hidden;
 	transition: all 0.5s;
 	-webkit-transition: all 0.5s;
@@ -566,7 +590,7 @@ a.expand {
 	}
 }
 
-/* ==========================================================================
+/* ==========================================================================px
 customize
 ========================================================================== */
 .navbar-fixed-top {
@@ -576,8 +600,15 @@ customize
 	background-color: #fff;
 	box-shadow: 0px 0px 4px rgba(0,0,0,0.2);
 }
+.navbar-nav > li > a {
+  padding-bottom: 5px;
+}
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
 	background-color: $color_background;
 }
+
+/* ==========================================================================
+icon
+========================================================================== */

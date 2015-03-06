@@ -4457,13 +4457,16 @@ html, body {
   margin: 0;
   padding: 0;
   color: #333;
-  background-color: #FCFCFC; }
+  background-color: #FDFDFD; }
 
 a:link, a:visited, a:hover {
   color: #333; }
 
 #navigation {
   opacity: 1; }
+  #navigation .icon-facebook-square:before, #navigation .icon-twitter-square:before, #navigation .icon-linkedin-square:before, #navigation .icon-mark:before {
+    font-size: 20px;
+    color: #6283B2; }
 
 #product div.thumbnail {
   margin-bottom: 30px; }
@@ -4872,7 +4875,7 @@ contents
 h1.title {
   border-left: 5px solid #6283B2;
   padding-left: 15px;
-  margin-bottom: 30px; }
+  margin-bottom: 60px; }
 
 h2.title, h3.title {
   border-left: 3px solid #6283B2;
@@ -4891,32 +4894,44 @@ h2.title, h3.title {
 
 .top_contents h1 > span {
   font-size: 100px; }
-.top_contents h2 > span {
-  color: #b28f47; }
+.top_contents h2 {
+  margin-bottom: 20px; }
+  .top_contents h2 > span {
+    color: #b28f47; }
 .top_contents p {
   font-size: 18px; }
 
 section {
   padding: 80px 0; }
 
-section#president .dl-horizontal dt {
-  width: 200px; }
-  section#president .dl-horizontal dt img {
-    width: 100%;
-    height: auto; }
 section#president .dl-horizontal dd {
-  margin-left: 220px;
   font-size: 16px;
   line-height: 1.5; }
+@media (min-width: 768px) {
+  section#president .dl-horizontal dt {
+    width: 200px; }
+    section#president .dl-horizontal dt img {
+      width: 100%;
+      height: auto; }
+  section#president .dl-horizontal dd {
+    margin-left: 220px; } }
+
+section#company ul.nav {
+  margin-bottom: 30px; }
+section#company .nav-tabs > li > a {
+  font-size: 18px; }
 
 footer {
-  padding: 40px 0 10px;
-  background-color: #eff1f3; }
+  padding: 30px 0 10px;
+  background-color: #eff1f3;
+  line-height: 1.5; }
+  footer h2.title, footer h3.title {
+    margin-bottom: 30px; }
   footer .copyright {
     font-size: 16px;
-    border-top: 1px solid #1C2533;
+    border-top: 1px dotted #6283B2;
     padding: 10px 0;
-    margin-top: 10px; }
+    margin-top: 30px; }
 
 /* ==========================================================================
 Portfolio
@@ -4945,7 +4960,7 @@ Portfolio
   display: block;
   position: absolute;
   z-index: 20;
-  background: rgba(100, 194, 158, 0.8);
+  background: rgba(98, 131, 178, 0.5);
   overflow: hidden;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
@@ -5010,7 +5025,7 @@ a.expand {
   height: 100%;
   opacity: 1; }
 
-/* ==========================================================================
+/* ==========================================================================px
 customize
 ========================================================================== */
 .navbar-fixed-top {
@@ -5020,5 +5035,12 @@ customize
   background-color: #fff;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2); }
 
+.navbar-nav > li > a {
+  padding-bottom: 5px; }
+
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-  background-color: #FCFCFC; }
+  background-color: #FDFDFD; }
+
+/* ==========================================================================
+icon
+========================================================================== */
