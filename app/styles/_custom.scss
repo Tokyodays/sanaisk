@@ -429,6 +429,7 @@ section {
 }
 section#president {
 	.dl-horizontal dt {
+    margin-bottom: 20px;
 	}
 	.dl-horizontal dd {
 		font-size: 16px;
@@ -476,118 +477,148 @@ footer {
 /* ==========================================================================
 Portfolio
 ========================================================================== */
-.effects {
-	padding-left: 15px;
-	.img {
-		position: relative;
-		margin-bottom: 50px;
-		position: relative;
-		z-index: 1;
-		overflow: hidden;
+#product {
+  a {
+    display: block;
+    margin-bottom: 30px;
+  }
+  a:link,
+  a:visited,
+  a:hover {
+    text-decoration: none;
+  }
+  h3,h4 {
+    margin-left: -15px;
+    line-height: 1.5;
+  }
+  h3 {
+    color: $color_main;
+    a:link,
+    a:visited,
+    a:hover {
+      color: $color_main;
+    }
+  }
+  h4 {
+    color: $color_font;
+    a:link,
+    a:visited,
+    a:hover {
+      color: $color_font;
+    }
+  }
+  .effects {
+  	padding-left: 15px;
+  	.img {
+  		position: relative;
+  		z-index: 1;
+  		overflow: hidden;
 
-		&:nth-child(n) {
-			margin-right: 5px;
-		}
+  		&:nth-child(n) {
+  			margin-right: 5px;
+  		}
 
-		&:first-child {
-			margin-left: -15px;
-		}
+  		&:first-child {
+  			margin-left: -15px;
+  		}
 
-		&:last-child {
-			margin-right: 0;
-		}
+  		&:last-child {
+  			margin-right: 0;
+  		}
 
-		img {
-			display: block;
-			margin: 0;
-			padding: 0;
-			height: auto;
-		}
-	}
+  		img {
+  			display: block;
+  			margin: 0;
+  			padding: 0;
+  			height: auto;
+  		}
+  	}
+  }
+  .overlay {
+  	display: block;
+  	position: absolute;
+  	z-index: 20;
+  	background: rgba($color_main, 0.5);
+  	overflow: hidden;
+  	transition: all 0.5s;
+  	-webkit-transition: all 0.5s;
+  	-moz-transition: all 0.5s;
+  	-o-transition: all 0.5s;
+  }
+
+  a.close-overlay {
+  	display: block;
+  	position: absolute;
+  	top: 0;
+  	right: 0;
+  	z-index: 100;
+  	width: 45px;
+  	height: 45px;
+  	font-size: 20px;
+  	font-weight: 700;
+  	color: #fff;
+  	line-height: 45px;
+  	text-align: center;
+  	background-color: #000;
+  	cursor: pointer;
+  	&.hidden{
+  		display: none;
+  	}
+  }
+
+  .expand {
+  	display: block;
+  	position: absolute;
+  	z-index: 100;
+  	text-align: center;
+  	color: #fff;
+  	font-weight: 600;
+  	font-size: 14px;
+  	text-transform: uppercase;
+  	line-height: 30px;
+  }
+  .overlay-effect {
+  	.img {
+  		img {
+  			width: -webkit-calc(100% + 20px) !important;
+  			width: calc(100% + 20px) !important;
+  			-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  			transition: opacity 0.35s, transform 0.35s;
+  			-moz-transition: opacity 0.35s, -moz-transform 0.35s;
+  			-o-transition: opacity 0.35s, -o-transform 0.35s;
+  			-webkit-transform: translate3d(-20px, 0, 0);
+  			transform: translate3d(-20px, 0, 0);
+  			-ms-transform: translate3d(-20px, 0, 0);
+  		}
+  		&:hover img {
+  			-webkit-transform: translate3d(0, 0, 0);
+  			transform: translate3d(0, 0, 0);
+  			-ms-transform: translate3d(0, 0, 0);
+  		}
+  		i {
+  			font-size: 30px;
+  		}
+  	}
+  	.overlay {
+  		bottom: 0;
+  		left: 0;
+  		right: 0;
+  		width: 100%;
+  		height: 100%;
+  		opacity: 0;
+  		.expand {
+  			left: 0;
+  			right: 0;
+  			bottom: 47%;
+  			margin: 0 auto -30px auto;
+  		}
+  	}
+  	.img.hover .overlay {
+  		height: 100%;
+  		opacity: 1;
+  	}
 }
-.overlay {
-	display: block;
-	position: absolute;
-	z-index: 20;
-	background: rgba($color_main, 0.5);
-	overflow: hidden;
-	transition: all 0.5s;
-	-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
-	-o-transition: all 0.5s;
-}
 
-a.close-overlay {
-	display: block;
-	position: absolute;
-	top: 0;
-	right: 0;
-	z-index: 100;
-	width: 45px;
-	height: 45px;
-	font-size: 20px;
-	font-weight: 700;
-	color: #fff;
-	line-height: 45px;
-	text-align: center;
-	background-color: #000;
-	cursor: pointer;
-	&.hidden{
-		display: none;
-	}
-}
-
-a.expand {
-	display: block;
-	position: absolute;
-	z-index: 100;
-	text-align: center;
-	color: #fff;
-	font-weight: 600;
-	font-size: 14px;
-	text-transform: uppercase;
-	line-height: 30px;
-}
-.overlay-effect {
-	.img {
-		img {
-			width: -webkit-calc(100% + 40px) !important;
-			width: calc(100% + 40px) !important;
-			-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-			transition: opacity 0.35s, transform 0.35s;
-			-moz-transition: opacity 0.35s, -moz-transform 0.35s;
-			-o-transition: opacity 0.35s, -o-transform 0.35s;
-			-webkit-transform: translate3d(-40px, 0, 0);
-			transform: translate3d(-40px, 0, 0);
-			-ms-transform: translate3d(-40px, 0, 0);
-		}
-		&:hover img {
-			-webkit-transform: translate3d(0, 0, 0);
-			transform: translate3d(0, 0, 0);
-			-ms-transform: translate3d(0, 0, 0);
-		}
-		i {
-			font-size: 30px;
-		}
-	}
-	.overlay {
-		bottom: 0;
-		left: 0;
-		right: 0;
-		width: 100%;
-		height: 100%;
-		opacity: 0;
-		a.expand {
-			left: 0;
-			right: 0;
-			bottom: 47%;
-			margin: 0 auto -30px auto;
-		}
-	}
-	.img.hover .overlay {
-		height: 100%;
-		opacity: 1;
-	}
 }
 
 /* ==========================================================================px
