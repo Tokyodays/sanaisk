@@ -40,7 +40,7 @@ gulp.task('html', ['styles', 'scripts'], function () {
         .pipe(cssFilter.restore())
         .pipe($.useref.restore())
         .pipe($.useref())
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('sanaiseiki/dist'))
         .pipe($.size());
 });
 
@@ -51,7 +51,7 @@ gulp.task('images', function () {
             progressive: true,
             interlaced: true
         })))
-        .pipe(gulp.dest('dist/images'))
+        .pipe(gulp.dest('sanaiseiki/dist/images'))
         .pipe(reload({stream:true, once:true}))
         .pipe($.size());
 });
@@ -64,7 +64,7 @@ gulp.task('fonts', function () {
     )
         .pipe($.filter('**/*.{eot,svg,ttf,woff}'))
         .pipe($.flatten())
-        .pipe(gulp.dest('dist/fonts'))
+        .pipe(gulp.dest('sanaiseiki/dist/fonts'))
         .pipe($.size());
 });
 
@@ -82,7 +82,7 @@ gulp.task('Iconfont', function(){
 });
 
 gulp.task('clean', function () {
-    return gulp.src(['app/styles/main.css', 'dist'], { read: false }).pipe($.clean());
+    return gulp.src(['app/styles/main.css', 'sanaiseiki/dist'], { read: false }).pipe($.clean());
 });
 
 gulp.task('build', ['html', 'images', 'fonts']);
