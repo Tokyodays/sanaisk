@@ -84,6 +84,7 @@ gulp.task('Iconfont', function(){
 gulp.task('icomoon', function () {
   gulp.src('app/styles/style.css')
     .pipe(gulp.dest('sanaiseiki/dist/styles'));
+    
   var streamqueue = require('streamqueue');
   return streamqueue({objectMode: true},
       $.bowerFiles(),
