@@ -81,11 +81,26 @@ gulp.task('Iconfont', function(){
     .pipe(gulp.dest('app/styles/fonts/'));
 });
 
+gulp.task('icomoon', function () {
+  gulp.src('app/styles/style.css')
+    .pipe(gulp.dest('sanaiseiki/dist/styles'));
+  var streamqueue = require('streamqueue');
+  return streamqueue({objectMode: true},
+      $.bowerFiles(),
+      gulp.src('app/styles/fonts/**/*')
+  )
+    .pipe($.filter('**/*.{eot,svg,ttf,woff}'))
+    .pipe($.flatten())
+    .pipe(gulp.dest('sanaiseiki/dist/styles/fonts'))
+    .pipe($.size());
+
+});
+
 gulp.task('clean', function () {
     return gulp.src(['app/styles/main.css', 'sanaiseiki/dist'], { read: false }).pipe($.clean());
 });
 
-gulp.task('build', ['html', 'images', 'fonts']);
+gulp.task('build', ['html', 'images', 'icomoon']);
 
 gulp.task('default', ['clean'], function () {
     gulp.start('build');
