@@ -1,0 +1,24 @@
+include ../_mixins/_mixins
+
+doctype
+html(lang='ja')
+  
+  head
+    include ../_include/_meta
+    block title_block
+      title マグネットチャックなどの超精密金型加工機器部品 株式会社サンアイ精機
+  
+  body
+    block navigation_block
+      +navigation
+    
+    #container.intro-effect-push
+      
+      block header_block
+      
+      block section_block
+        
+      block footer_block;
+        +footer
+
+    include ../_include/_scripts

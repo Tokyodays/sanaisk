@@ -248,7 +248,7 @@ button.trigger {
 	color: transparent;
 	font-size: 2em;
 	cursor: pointer;
-	@include animation(top_click 1.2s ease 1 3s);
+	@include animation(top_click 1.2s ease 1 8s);
 	> &::before {
 		position: absolute;
 		bottom: 100%;
@@ -290,7 +290,7 @@ button.trigger {
 			speak: none;
 			-webkit-font-smoothing: antialiased;
 			-moz-osx-font-smoothing: grayscale;
-			@include animation(top_click_arrow 1.2s ease infinite 4.5s);
+			@include animation(top_click_arrow 1.2s ease infinite 8.5s);
 		}
 	}
 }

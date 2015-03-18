@@ -44,6 +44,14 @@ gulp.task('html', ['styles', 'scripts'], function () {
         .pipe($.size());
 });
 
+gulp.task('jade', function() {
+
+  return gulp.src('app/jade/*.jade')
+    .pipe($.jade())
+    .pipe(gulp.dest('app/'))
+    .pipe(gulp.dest('sanaiseiki/dist/'))
+});
+
 gulp.task('images', function () {
     return gulp.src('app/images/**/*')
         .pipe($.cache($.imagemin({
@@ -84,7 +92,7 @@ gulp.task('Iconfont', function(){
 gulp.task('icomoon', function () {
   gulp.src('app/styles/style.css')
     .pipe(gulp.dest('sanaiseiki/dist/styles'));
-    
+
   var streamqueue = require('streamqueue');
   return streamqueue({objectMode: true},
       $.bowerFiles(),
@@ -143,6 +151,7 @@ gulp.task('watch', ['serve'], function () {
     // watch for changes
     gulp.watch(['app/*.html'], reload);
 
+    gulp.watch('app/jade/**/*.jade', ['jade']);
     gulp.watch('app/styles/**/*.scss', ['styles']);
     gulp.watch('app/scripts/**/*.js', ['scripts']);
     gulp.watch('app/images/**/*', ['images']);
