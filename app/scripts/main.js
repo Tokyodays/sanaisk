@@ -20,48 +20,49 @@
   }());
 
   (function(win, doc) {
+    if ($("#gmap").size()) {
+      var request = {
+        placeId: 'ChIJlfzkL8hLj18R_M1MhUnKXqg'
+      };
+      var google = win.google,
+      elm = $("#gmap"),
+      mapOptions = {
+        zoom: 15,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        scrollwheel: false,
+        scaleControl: true
+      },
+      styles = [
+        {
+          "stylers": [
+            {"saturation": 0}
+          ]
+        }
+      ],
+      map = new google.maps.Map(elm, mapOptions),
+      geocoder = new google.maps.Geocoder(),
+      STYLE_NAME = "monochrome";
+      var service = new google.maps.places.PlacesService(map);
 
-    var request = {
-      placeId: 'ChIJlfzkL8hLj18R_M1MhUnKXqg'
-    };
-    var google = win.google,
-    elm = doc.getElementById("gmap"),
-    mapOptions = {
-      zoom: 15,
-      mapTypeId: google.maps.MapTypeId.ROADMAP,
-      scrollwheel: false,
-      scaleControl: true
-    },
-    styles = [
-      {
-        "stylers": [
-          {"saturation": 0}
-        ]
-      }
-    ],
-    map = new google.maps.Map(elm, mapOptions),
-    geocoder = new google.maps.Geocoder(),
-    STYLE_NAME = "monochrome";
-    var service = new google.maps.places.PlacesService(map);
-
-    service.getDetails(request, function(place, status) {
-      if (status == google.maps.places.PlacesServiceStatus.OK) {
-        geocoder.geocode({
-          "address": "サンアイ精機"
-        }, function(results, status){
-          if (status === google.maps.GeocoderStatus.OK) {
-            map.setCenter(results[0].geometry.location);
-            var marker = new google.maps.Marker({
-              map: map,
-              position: place.geometry.location
-            });
-            var infowindow = new google.maps.InfoWindow();
-            infowindow.setContent(place.adr_address);
-            infowindow.open(map, marker);
-          }
-        });
-      }
-    });
+      service.getDetails(request, function(place, status) {
+        if (status == google.maps.places.PlacesServiceStatus.OK) {
+          geocoder.geocode({
+            "address": "サンアイ精機"
+          }, function(results, status){
+            if (status === google.maps.GeocoderStatus.OK) {
+              map.setCenter(results[0].geometry.location);
+              var marker = new google.maps.Marker({
+                map: map,
+                position: place.geometry.location
+              });
+              var infowindow = new google.maps.InfoWindow();
+              infowindow.setContent(place.adr_address);
+              infowindow.open(map, marker);
+            }
+          });
+        }
+      });
+    }
   })(this, document);
 
   // disable/enable scroll (mousewheel and keys) from http://stackoverflow.com/a/4770179
@@ -191,11 +192,28 @@
       $(this).addClass("hover");
     })
     // handle the mouseleave functionality
-    .mouseleave(function(){
+    $(".img").mouseleave(function(){
       $(this).removeClass("hover");
     });
 
     //smooth scroll
     $("nav#navigation a").smoothScroll();
+
+    $('.effect-left').onScreen({
+      container: window,
+      direction: 'vertical',
+      doIn: function() {
+       // Do something to the matched elements as they come in
+      },
+      doOut: function() {
+       // Do something to the matched elements as they get off scren
+      },
+      tolerance: 0,
+      throttle: 50,
+      toggleClass: 'onScreen',
+      lazyAttr: null,
+      lazyPlaceholder: 'someImage.jpg',
+      debug: false
+    });
 
   })();

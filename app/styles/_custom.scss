@@ -313,7 +313,7 @@ button.trigger {
 /* -------------------------- */
 .intro-effect-push:not(.notrans) .header,
 .intro-effect-push:not(.notrans) > .title,
-.intro-effect-push:not(.notrans) .content > div {
+.intro-effect-push:not(.notrans) .content > div.push {
 	-webkit-transition-property: opacity, -webkit-transform;
 	transition-property: opacity, transform;
 	-webkit-transition-duration: 1s;
@@ -343,20 +343,21 @@ button.trigger {
 	padding: 6em 1em 2em;
 }
 
-.intro-effect-push .content > div {
+.intro-effect-push .content > div.push {
 	margin-top: 50px;
 	color: #b2b2c0;
+  overflow: hidden;
 }
 
 .intro-effect-push > .title,
-.intro-effect-push .content > div {
+.intro-effect-push .content > div.push {
 	-webkit-transform: translateY(400px);
 	transform: translateY(400px);
 	opacity: 0;
 }
 
 .intro-effect-push.modify > .title,
-.intro-effect-push.modify .content > div {
+.intro-effect-push.modify .content > div.push {
 	-webkit-transform: translateY(0);
 	transform: translateY(0);
 	opacity: 1;
@@ -426,6 +427,7 @@ h3.title {
 }
 section {
 	padding: 80px 0;
+  overflow: hidden;
 }
 section#president {
 	.dl-horizontal dt {
@@ -621,7 +623,7 @@ Portfolio
 
 }
 
-/* ==========================================================================px
+/* ==========================================================================
 customize
 ========================================================================== */
 .navbar-fixed-top {
@@ -641,5 +643,89 @@ customize
 }
 
 /* ==========================================================================
-icon
+lineup
 ========================================================================== */
+section.lineup {
+  padding-top: 0;
+  margin-top: -80px;
+  h1 {
+    margin: 0;
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    background-image: url(http://i.ytimg.com/vi/yqAYPEXnAAs/hqdefault.jpg);
+    color: $color_background;
+    p{
+      position:relative;
+      padding: 60px 0;
+      text-align: center;
+    }
+    span:before {
+       background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAEUlEQVQIW2NkgID/jCACiBkBDx8CAhQOwfMAAAAASUVORK5CYII=");
+      /*background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAFUlEQVQIW2NMat70f16tHyMjAxQAADiFBAMXjf4EAAAAAElFTkSuQmCC");*/
+      background-repeat: top left;
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      @include opacity(0.5);
+    }
+  }
+
+}
+
+/* ==========================================================================
+industry
+========================================================================== */
+
+.backimage {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.backwhite {
+  background-color: $color_background;
+  margin: 0;
+  color: $color_font;
+}
+.industry {
+  min-height: 400px;
+  padding: 8%;
+  h3 {
+    margin-bottom: 30px;
+    font-size: 24px;
+  }
+  p {
+    line-height: 2;
+    font-size: 16px;
+  }
+}
+/* ==========================================================================
+crosstable
+========================================================================== */
+.cross1 {
+  background-image: url(http://www.morishige-kikai.jp/mt/img/5_MSimg4_108.JPG);
+}
+.cross2 {
+  background-image: url(http://blog-imgs-36.fc2.com/s/h/i/shinodayama/201003272324360cc.jpg);
+}
+
+/* ==========================================================================
+onscreen
+========================================================================== */
+
+.effect-left {
+  -webkit-transition:all 1s ease;
+  transition:all 1s ease;
+  transform: translate(20px);
+  -webkit-transform: translate(20px);
+  @include opacity(0);
+  &.onScreen {
+    transform: translate(0);
+    -webkit-transform: translate(0);
+    @include opacity(1);
+  }
+}
