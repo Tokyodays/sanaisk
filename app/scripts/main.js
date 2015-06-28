@@ -185,7 +185,7 @@
     window.addEventListener( 'scroll', scrollPage );
     trigger.addEventListener( 'click', function() { toggle( 'reveal' ); } );
 
-    $(".player").mb_YTPlayer();
+    $(".player").YTPlayer();
 
     // handle the mouseenter functionality
     $(".img").mouseenter(function(){
