@@ -33,12 +33,12 @@ gulp.task('html', ['styles', 'scripts'], function () {
     return gulp.src('app/*.html')
         .pipe($.useref.assets())
         .pipe(jsFilter)
-        .pipe($.uglify())
-        .pipe(jsFilter.restore())
+        //.pipe($.uglify())
+        //.pipe(jsFilter.restore())
         .pipe(cssFilter)
         .pipe($.csso())
-        .pipe(cssFilter.restore())
-        .pipe($.useref.restore())
+        //.pipe(cssFilter.restore())
+        //.pipe($.useref.restore())
         .pipe($.useref())
         .pipe(gulp.dest('sanaiseiki/dist'))
         .pipe($.size());
@@ -118,15 +118,12 @@ gulp.task('default', ['clean'], function () {
 gulp.task('serve', ['styles'], function () {
     browserSync.init(null, {
         server: {
-            baseDir: 'app',
-            directory: true
+          baseDir: 'app',
+          directory: true
         },
-        debugInfo: false,
-        open: false,
-        hostnameSuffix: ".xip.io"
-    }, function (err, bs) {
-        require('opn')(bs.options.url);
-        console.log('Started connect web server on ' + bs.options.url);
+        debugInfo: true,
+        open: true,
+        xip: true
     });
 });
 
@@ -148,7 +145,7 @@ gulp.task('wiredep', function () {
 
 gulp.task('watch', ['serve'], function () {
 
-    // watch for changes
+    //watch for changes
     gulp.watch(['app/*.html'], reload);
 
     gulp.watch('app/jade/**/*.jade', ['jade']);

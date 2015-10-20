@@ -39,11 +39,10 @@
           ]
         }
       ],
-      map = new google.maps.Map(elm, mapOptions),
+      map = new google.maps.Map(elm.get(0), mapOptions),
       geocoder = new google.maps.Geocoder(),
       STYLE_NAME = "monochrome";
       var service = new google.maps.places.PlacesService(map);
-
       service.getDetails(request, function(place, status) {
         if (status == google.maps.places.PlacesServiceStatus.OK) {
           geocoder.geocode({
