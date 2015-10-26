@@ -15,8 +15,10 @@ mixin navigation
           li
             a(href='crosstable.html') クロステーブル
           li
-            a(href='magnetick_chuck.html') マグネットチャック
-            ul.dropdown-menu
+            a(href='/', data-toggle='dropdown', role='button', aria-expanded='false')
+              | マグネットチャック
+              span.caret
+            ul.dropdown-menu(role='menu')
               li
                 a(href='#') 永久磁石式
               li
@@ -25,9 +27,6 @@ mixin navigation
                 a(href='#') 切削加工用
               li
                 a(href='#') クロスマグネットチャック
-
-          li
-            a(href='hard_magnetick_chuck.html') 超硬用マグネットチャック
           li
             a(href='holder.html') 電極ホルダー
           li
