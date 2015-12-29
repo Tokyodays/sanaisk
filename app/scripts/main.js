@@ -189,7 +189,7 @@
   }
 })(this, document);
 
-(function(){
+$(function(){
   $('.player').YTPlayer();
 
   // handle the mouseenter functionality
