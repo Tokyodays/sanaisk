@@ -5,120 +5,78 @@ var gulp = require('gulp');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var gutil = require('gulp-util');
+var gulpSequence = require('gulp-sequence');
 
 // load plugins
 var $ = require('gulp-load-plugins')();
 
 gulp.task('styles', function () {
-    return gulp.src('app/styles/main.scss')
-        .pipe($.sass({errLogToConsole: true}))
+    return gulp.src('app/styles/**/*.scss')
+        .pipe($.sass({
+          errLogToConsole: true,
+          outputStyle: 'compressed'
+        }))
         .pipe($.autoprefixer('last 1 version'))
-        .pipe(gulp.dest('app/styles'))
-        .pipe(reload({stream:true}))
         .pipe($.size())
+        .pipe(gulp.dest('sanaiseiki/dist/styles'))
+        .pipe(reload({stream:true}))
         .pipe($.notify("Compilation complete."));;
 });
 
 gulp.task('scripts', function () {
     return gulp.src('app/scripts/**/*.js')
-        .pipe($.jshint())
-        .pipe($.jshint.reporter(require('jshint-stylish')))
-        .pipe($.size());
+        .pipe($.size())
+        .pipe(gulp.dest('sanaiseiki/dist/scripts'))
+        .pipe(reload({stream:true}));
 });
 
-gulp.task('html', ['styles', 'scripts'], function () {
-    var jsFilter = $.filter('**/*.js');
-    var cssFilter = $.filter('**/*.css');
-
-    return gulp.src('app/*.html')
-        .pipe($.useref.assets())
-        .pipe(jsFilter)
-        //.pipe($.uglify())
-        //.pipe(jsFilter.restore())
-        .pipe(cssFilter)
-        .pipe($.csso())
-        //.pipe(cssFilter.restore())
-        //.pipe($.useref.restore())
-        .pipe($.useref())
-        .pipe(gulp.dest('sanaiseiki/dist'))
-        .pipe($.size());
+gulp.task('bowercopy', function() {
+  return gulp.src('app/bower_components/**/*')
+    .pipe(gulp.dest('sanaiseiki/dist/bower_components/'))
 });
 
 gulp.task('jade', function() {
 
   return gulp.src('app/jade/*.jade')
     .pipe($.jade())
-    .pipe(gulp.dest('app/'))
     .pipe(gulp.dest('sanaiseiki/dist/'))
 });
 
 gulp.task('images', function () {
     return gulp.src('app/images/**/*')
-        .pipe($.cache($.imagemin({
-            optimizationLevel: 3,
-            progressive: true,
-            interlaced: true
-        })))
-        .pipe(gulp.dest('sanaiseiki/dist/images'))
-        .pipe(reload({stream:true, once:true}))
-        .pipe($.size());
-});
-
-gulp.task('fonts', function () {
-    var streamqueue = require('streamqueue');
-    return streamqueue({objectMode: true},
-        $.bowerFiles(),
-        gulp.src('app/fonts/**/*')
-    )
-        .pipe($.filter('**/*.{eot,svg,ttf,woff}'))
-        .pipe($.flatten())
-        .pipe(gulp.dest('sanaiseiki/dist/fonts'))
-        .pipe($.size());
-});
-
-gulp.task('Iconfont', function(){
-  gulp.src(['app/icons/*.svg'])
-    .pipe(iconfont({
-      fontName: 'sanaifont', // required
-      appendCodepoints: true // recommended option
-    }))
-      .on('codepoints', function(codepoints, options) {
-        // CSS templating, e.g.
-        console.log(codepoints, options);
-      })
-    .pipe(gulp.dest('app/styles/fonts/'));
+      .pipe($.cache($.imagemin({
+          optimizationLevel: 3,
+          progressive: true,
+          interlaced: true
+      })))
+      .pipe($.size())
+      .pipe(gulp.dest('sanaiseiki/dist/images'))
+      .pipe(reload({stream:true, once:true}))
 });
 
 gulp.task('icomoon', function () {
-  gulp.src('app/styles/style.css')
-    .pipe(gulp.dest('sanaiseiki/dist/styles'));
-
-  var streamqueue = require('streamqueue');
-  return streamqueue({objectMode: true},
-      $.bowerFiles(),
-      gulp.src('app/styles/fonts/**/*')
-  )
-    .pipe($.filter('**/*.{eot,svg,ttf,woff}'))
-    .pipe($.flatten())
-    .pipe(gulp.dest('sanaiseiki/dist/styles/fonts'))
-    .pipe($.size());
-
+  return gulp.src('app/icons/fonts/*')
+    .pipe(gulp.dest('sanaiseiki/dist/styles/fonts'));
+});
+gulp.task('icostyle', function () {
+  return gulp.src('app/icons/style.css')
+    .pipe(gulp.dest('sanaiseiki/dist/styles'))
 });
 
 gulp.task('clean', function () {
-    return gulp.src(['app/styles/main.css', 'sanaiseiki/dist'], { read: false }).pipe($.clean());
+    return gulp.src(['sanaiseiki/dist/*'], { read: false }).pipe($.clean());
 });
 
-gulp.task('build', ['html', 'images', 'icomoon']);
+gulp.task('build', gulpSequence('clean', 'bowercopy', 'jade', 'images', ['icomoon', 'icostyle'], 'styles', 'scripts'));
 
-gulp.task('default', ['clean'], function () {
-    gulp.start('build');
+gulp.task('default', ['watch'], function () {
+    //gulp.start('build');
 });
 
-gulp.task('serve', ['styles'], function () {
+gulp.task('serve', ['build'], function () {
     browserSync.init(null, {
         server: {
-          baseDir: 'app',
+          baseDir: 'sanaiseiki/dist',
           directory: true
         },
         debugInfo: true,

@@ -1,0 +1,28 @@
+.icon-logo {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe600;');
+}
+.icon-logomark {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe601;');
+}
+.icon-mark {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe61f;');
+}
+.icon-search {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe036;');
+}
+.icon-arrow-down {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe097;');
+}
+.icon-twitter-square {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf081;');
+}
+.icon-facebook-square {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf082;');
+}
+.icon-linkedin-square {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf08c;');
+}
+.icon-angle-down {
+    *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf107;');
+}
+
