@@ -1,3 +1,20 @@
+
+$base-line-height: 2rem;
+$modular-scale-base: 1em;
+$modular-scale-ratio: $golden;
+
+@function vr($lines: 1){
+  $line-height: $base-line-height * $lines;
+  @return $line-height;
+}
+
+@mixin gl($lines: 1){
+  margin-top:    $base-line-height * 2;
+  margin-bottom: $base-line-height * 1;
+  line-height:   $base-line-height * $lines;
+}
+
+
 @mixin keyframes($animation-name) {
   @-webkit-keyframes $animation-name {
     @content;

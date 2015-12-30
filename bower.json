@@ -10,5 +10,8 @@
     "onScreen": "*",
     "localize": "~1.0.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "modular-scale": "~2.1.1",
+    "bourbon": "~4.2.6"
+  }
 }
