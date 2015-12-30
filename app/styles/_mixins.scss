@@ -1,7 +1,5 @@
 
-$base-line-height: 2rem;
-$modular-scale-base: 1em;
-$modular-scale-ratio: $golden;
+
 
 @function vr($lines: 1){
   $line-height: $base-line-height * $lines;
