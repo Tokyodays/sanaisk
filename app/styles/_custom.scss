@@ -393,6 +393,10 @@ h3.title {
 	border-left: 3px solid $color_main;
 	padding-left: 10px;
 	margin-bottom: 10px;
+  span.subtitle {
+    color: $color_font;
+    font-size: ms(-1);
+  }
 }
 #navigation {
 	-webkit-transition: all 1s ease-in-out;
