@@ -1,7 +1,5 @@
 @charset "utf-8";
 
-
-
 body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6  {
   font-family:"游明朝体", "Yu Mincho", YuMincho, _sans_selif;
   text-shadow:0px 0px 1px rgba(150,150,150,.1);
@@ -186,49 +184,46 @@ a:hover {
 			&.icon-mark:before {
 				font-size: 100px;
 			}
-			@include animation(top_figure 1.2s ease 1 1s);
+      margin-bottom: 20px;
+			@include animation(top_figure 1.2s ease 1 1s both);
 		}
 		h1 {
-			padding: 0 0 0.2em;
+			padding: 0 0 0.5em;
 			font-weight: 800;
 			margin: 0 auto;
 			&.icon-logo:before {
 				font-size: ms(1);
 			}
-			@include animation(top_h1 1.2s ease 1 1.5s);
+			@include animation(top_h1 1.2s ease 1 1.5s both);
 		}
 		h2 {
 			font-size: 30px;
 			margin: 0;
       line-height: 2;
-			@include animation(top_h2 1.2s ease 1 2s);
+			@include animation(top_h2 1.2s ease 1 2s both);
 		}
 	}
 
 }
 @include keyframes(top_click){
 	0% {
-		opacity:0;
-		-webkit-transform: translateY(-30%);
-		transform: translateY(-30%);
+		@include opacity(0)
+    @include transform(translateY(-30%));
 	}
 	100% {
-		opacity:1;
-		-webkit-transform: translateY(0);
-		transform: translateY(0);
+		@include opacity(1)
+    @include transform(translateY(0%));
 	}
 }
 
 @include keyframes(top_click_arrow){
 	0% {
-		opacity:0;
-		-webkit-transform: translateY(-10%);
-		transform: translateY(-10%);
+		@include opacity(0)
+    @include transform(translateY(-10%));
 	}
 	100% {
-		opacity:1;
-		-webkit-transform: translateY(0);
-		transform: translateY(0);
+		@include opacity(1)
+    @include transform(translateY(0%));
 	}
 }
 
@@ -248,8 +243,8 @@ button.trigger {
 	color: transparent;
 	font-size: 2em;
 	cursor: pointer;
-	@include animation(top_click 1.2s ease 1 8s);
-	> &::before {
+	@include animation(top_click 1.2s ease 1 4s both);
+	&:before {
 		position: absolute;
 		bottom: 100%;
 		left: -100%;
@@ -262,17 +257,17 @@ button.trigger {
 		backface-visibility: hidden;
 	}
 
-	> &:focus {
+	&:focus {
 		outline: none;
 	}
 
-	> & > span {
+	> span {
 		position: relative;
 		display: block;
 		overflow: hidden;
 		width: 100%;
 		height: 100%;
-		&::before {
+		&:before {
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -290,7 +285,7 @@ button.trigger {
 			speak: none;
 			-webkit-font-smoothing: antialiased;
 			-moz-osx-font-smoothing: grayscale;
-			@include animation(top_click_arrow 1.2s ease infinite 8.5s);
+			@include animation(top_click_arrow 1.2s ease infinite 4.5s both);
 		}
 	}
 }
