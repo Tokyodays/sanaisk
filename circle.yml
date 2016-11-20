@@ -5,6 +5,8 @@ machine:
 dependencies:
   post:
     - npm install -g gulp
+    - npm install -g bower
+    - bower install
     - gulp build
 
 deployment:
