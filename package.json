@@ -2,7 +2,7 @@
   "name": "sanaisk",
   "version": "0.0.0",
   "engines": {
-    "node": ">=0.12.0"
+    "node": ">=0.10.0"
   },
   "dependencies": {
     "express": "~3.3.4"
@@ -34,8 +34,5 @@
     "opn": "*",
     "streamqueue": "*",
     "wiredep": "*"
-  },
-  "engines": {
-    "node": ">=0.10.0"
   }
 }

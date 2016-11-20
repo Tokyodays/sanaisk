@@ -205,7 +205,7 @@ $(function(){
   $('nav#navigation a').smoothScroll();
 
 	$('#container').hasClass('modify') && $("#navigation").removeClass("effect");;
-
+/*
   $('.effect-left').onScreen({
     container: window,
     direction: 'vertical',
@@ -222,4 +222,5 @@ $(function(){
     lazyPlaceholder: 'someImage.jpg',
     debug: false
   });
+	*/
 });

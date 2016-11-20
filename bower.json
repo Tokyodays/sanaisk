@@ -7,10 +7,6 @@
     "jquery.mb.ytplayer": "*",
     "waypoints": "*",
     "jquery-smooth-scroll": "*",
-    "onScreen": "*",
-    "localize": "~1.0.0"
-  },
-  "devDependencies": {
     "modular-scale": "~2.1.1",
     "bourbon": "~4.2.6",
     "jquery-localize": "jquery.localize#^0.1.2"
