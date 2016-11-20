@@ -5,6 +5,7 @@ machine:
 dependencies:
   post:
     - npm install -g gulp
+    - gulp build
 
 deployment:
   production:
