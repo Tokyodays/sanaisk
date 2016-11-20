@@ -7,7 +7,7 @@ dependencies:
     - npm install -g gulp
 
 deployment:
-  production:
+  staging:
     branch: master
     commands:
       - gulp build
