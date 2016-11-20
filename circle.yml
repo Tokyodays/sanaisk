@@ -7,9 +7,7 @@ dependencies:
     - npm install -g gulp
 
 deployment:
-  staging:
+  production:
     branch: master
-    commands:
-      - gulp build
     heroku:
       appname: sanai
