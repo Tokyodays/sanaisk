@@ -18,7 +18,7 @@ gulp.task('styles', function () {
         }))
         .pipe($.autoprefixer('last 1 version'))
         .pipe($.size())
-        .pipe(gulp.dest('sanaiseiki/dist/styles'))
+        .pipe(gulp.dest('dist/public/styles'))
         .pipe(reload({stream:true}))
         .pipe($.notify("Compilation complete."));;
 });
@@ -26,20 +26,20 @@ gulp.task('styles', function () {
 gulp.task('scripts', function () {
     return gulp.src('app/scripts/**/*.js')
         .pipe($.size())
-        .pipe(gulp.dest('sanaiseiki/dist/scripts'))
+        .pipe(gulp.dest('dist/scripts'))
         .pipe(reload({stream:true}));
 });
 
 gulp.task('bowercopy', function() {
   return gulp.src('app/bower_components/**/*')
-    .pipe(gulp.dest('sanaiseiki/dist/bower_components/'))
+    .pipe(gulp.dest('dist/bower_components/'))
 });
 
 gulp.task('jade', function() {
 
   return gulp.src('app/jade/*.jade')
     .pipe($.jade())
-    .pipe(gulp.dest('sanaiseiki/dist/'))
+    .pipe(gulp.dest('dist/'))
 });
 
 gulp.task('images', function () {
@@ -50,21 +50,21 @@ gulp.task('images', function () {
           interlaced: true
       })))
       .pipe($.size())
-      .pipe(gulp.dest('sanaiseiki/dist/images'))
+      .pipe(gulp.dest('dist/public/images'))
       .pipe(reload({stream:true, once:true}))
 });
 
 gulp.task('icomoon', function () {
   return gulp.src('app/icons/fonts/*')
-    .pipe(gulp.dest('sanaiseiki/dist/styles/fonts'));
+    .pipe(gulp.dest('dist/public/styles/fonts'));
 });
 gulp.task('icostyle', function () {
   return gulp.src('app/icons/style.css')
-    .pipe(gulp.dest('sanaiseiki/dist/styles'))
+    .pipe(gulp.dest('dist/public/styles'))
 });
 
 gulp.task('clean', function () {
-    return gulp.src(['sanaiseiki/dist/*'], { read: false }).pipe($.clean());
+    return gulp.src(['dist/public/*'], { read: false }).pipe($.clean());
 });
 
 gulp.task('build', gulpSequence('clean', 'bowercopy', 'jade', 'images', ['icomoon', 'icostyle'], 'styles', 'scripts'));
@@ -76,7 +76,7 @@ gulp.task('default', ['watch'], function () {
 gulp.task('serve', ['build'], function () {
     browserSync.init(null, {
         server: {
-          baseDir: 'sanaiseiki/dist',
+          baseDir: 'dist/public',
           directory: true
         },
         debugInfo: true,
