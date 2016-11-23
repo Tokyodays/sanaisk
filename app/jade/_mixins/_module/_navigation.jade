@@ -11,42 +11,29 @@ mixin navigation
       .navbar-collapse.collapse
         ul.nav.navbar-nav
           li
-            a(href='presetter.html') 電極プリセッター
-          li
-            a(href='crosstable.html') クロステーブル
-          li
-            a(href='/', data-toggle='dropdown', role='button', aria-expanded='false')
-              | マグネットチャック
-              span.caret
-            ul.dropdown-menu(role='menu')
-              li
-                a(href='permanent.magnetchuck.html') 永久磁石式
-              li
-                a(href='#') 超硬用
-              li
-                a(href='#') 切削加工用
-              //li
-              //  a(href='#') クロスマグネットチャック
+            a(href='magneticchuck.html') マグネットチャック
           li
             a(href='holder.html') 電極ホルダー
           li
+            a(href='presetter.html') 電極プリセッター
+          li
             a(href='rolling_holder.html') 電極回転装置
           li
-            a(href='/', data-toggle='dropdown', role='button', aria-expanded='false')
-              | 会社情報
-              span.caret
-            ul.dropdown-menu(role='menu')
-              li
-                a(href='index.html#company') 製品情報
-              li
-                a(href='index.html#president') 社長あいさつ
-              li
-                a(href='index.html#access') アクセス
-              li
-                a(href='index.html#contact') お問い合わせ
+            a(href='crosstable.html') クロステーブル
+          li
+            a(href='other.html') その他製品
+          li
+            a(href='aboutus.html') 会社情報
         form.navbar-form.navbar-right(role='search')
           select.form-control
             option 日本語
             option English
             option 简体中文
+        ul.nav.navbar-nav.navbar-right
+          li
+            a(href='#') <span class="icon-twitter-square"></span>
+          li
+            a(href='#') <span class="icon-facebook-square"></span>
+          li
+            a(href='#') <span class="icon-linkedin-square"></span>
       // /.nav-collapse
