@@ -4,10 +4,11 @@ machine:
 
 dependencies:
   post:
-    - npm install -g gulp
-    - npm install -g bower
-    - bower install
-    - gulp build
+    #
+      - npm install -g gulp
+      - npm install -g bower
+      - bower install
+      - gulp build
 
 deployment:
   production:

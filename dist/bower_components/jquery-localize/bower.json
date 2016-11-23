@@ -1,0 +1,36 @@
+{
+  "name": "jquery-localize",
+  "version": "0.1.2",
+  "license": "MIT",
+  "description": "A jQuery plugin that makes it easy to i18n your static web site.",
+  "keywords": [
+    "jquery",
+    "localize",
+    "i18n"
+  ],
+  "homepage": "https://github.com/Haixing-Hu/jquery-localize",
+  "authors": [
+    {
+      "name": "coderifous",
+      "email": "jim@thegarvin.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Haixing-Hu/jquery-localize.git"
+  },
+  "main": [
+    "dist/jquery.localize.js"
+  ],
+  "dependencies": {
+    "jquery": ">=1.9.0"
+  },
+  "devDependencies": {
+    "qunit":">=1.11.0"
+  },
+  "ignore": [
+    "test",
+    "libs"
+  ]
+}
+
