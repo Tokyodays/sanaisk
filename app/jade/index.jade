@@ -23,31 +23,9 @@ block section_block
     p それを弊社のスローガンにしています的なダミーテキスト
   section#product.content.container
     .push
+      h1.section_title
+        | 製造プロセスを改善する製品ラインナップ
       .row
-        .col-xs-12.col-sm-6.col-md-4
-          a(href='#')
-            .overlay-effect.effects.clearfix
-              .img
-                img(src='/images/presetter.png', alt='電極プリセッター', draggable='false')
-                .overlay
-                  span.expand
-                    i.icon-search
-                    br
-                    | View More
-              h3 電極プリセッター
-              h4 放電加工機の電極精度出しは外段取りで
-        .col-xs-12.col-sm-6.col-md-4
-          a(href='#')
-            .overlay-effect.effects.clearfix
-              .img
-                img(src='/images/crosstable.png', alt='クロステーブル', draggable='false')
-                .overlay
-                  span.expand
-                    i.icon-search
-                    br
-                    | View More
-              h3 クロステーブル
-              h4 X,Yの位置決めをよりスピーディーに、正確に
         .col-xs-12.col-sm-6.col-md-4
           a(href='#')
             .overlay-effect.effects.clearfix
@@ -76,6 +54,18 @@ block section_block
           a(href='#')
             .overlay-effect.effects.clearfix
               .img
+                img(src='/images/presetter.png', alt='電極プリセッター', draggable='false')
+                .overlay
+                  span.expand
+                    i.icon-search
+                    br
+                    | View More
+              h3 電極プリセッター
+              h4 放電加工機の電極精度出しは外段取りで
+        .col-xs-12.col-sm-6.col-md-4
+          a(href='#')
+            .overlay-effect.effects.clearfix
+              .img
                 img(src='/images/rolling_holder.png', alt='電極回転装置', draggable='false')
                 .overlay
                   span.expand
@@ -88,6 +78,18 @@ block section_block
           a(href='#')
             .overlay-effect.effects.clearfix
               .img
+                img(src='/images/crosstable.png', alt='クロステーブル', draggable='false')
+                .overlay
+                  span.expand
+                    i.icon-search
+                    br
+                    | View More
+              h3 クロステーブル
+              h4 X,Yの位置決めをよりスピーディーに、正確に
+        .col-xs-12.col-sm-6.col-md-4
+          a(href='#')
+            .overlay-effect.effects.clearfix
+              .img
                 img(src='/images/magnetic_hard.png', alt='超硬用マグネットチャック', draggable='false')
                 .overlay
                   span.expand
@@ -96,202 +98,74 @@ block section_block
                     | View More
               h3 超硬用マグネットチャック
               h4 小物用、薄物用、超硬用マグネットチャック。あなたのニーズにお答えします
-  section#company.container
-    h1.title 企業情報
-    ul.nav.nav-tabs
-      li.active
-        a(href='#summary', data-toggle='tab') 企業概要
-      li
-        a(href='#history', data-toggle='tab') 沿革
-      li
-        a(href='#equipment', data-toggle='tab') 設備一覧
-    .tab-content
-      #summary.tab-pane.active
-        table.table.table_design
-          tbody
-            tr
-              th 社名
-              td 株式会社 サンアイ精機
-            tr
-              th 所在地
-              td 岩手県奥州市江刺区愛宕字金谷127番地の1
-            tr
-              th TEL
-              td 0197 - 35 - 5518
-            tr
-              th FAX
-              td 0197 - 35 - 5527
-            tr
-              th 資本金
-              td 5,000,000 円
-            tr
-              th 役員
-              td 代表取締役 菊地晋也
-            tr
-              th 従業員
-              td 男子 6人 女子 4 人 計 10 人
-            tr
-              th 主要取引先
-              td
-                | 株式会社 ソディック
-                br
-                |  株式会社 ソディックハイテック
-                br
-                |  株式会社 エロワ日本
-                br
-                |  システム・スリーアール日本
-                br
-                |  株式会社 ユアサ商事株式会社
-                br
-                |  株式会社 兼松KGK
-                br
-                |  株式会社 ミスミ
-                br
-                |  株式会社 ヤマモリ
-            tr
-              th 主要生産品目
-              td クロステーブル・電極プリセッター・永磁式マグネットチャック（標準型、超硬材用システム型、特殊型）・電極回転装置
-      #history.tab-pane
-        table.table.table_design
-          tbody
-            tr
-              th 昭和 48 年 5 月
-              td 創業開始
-            tr
-              th 昭和 53 年 7 月
-              td 会社設立と同時に東北リコーと取引開始
-            tr
-              th 昭和 61 年 8 月
-              td 山田金型工場創設 プレス金型販売
-            tr
-              th 昭和 61 年
-              td ソディックと取引開始・自社製品クロステーブル販売開始
-            tr
-              th 平成 4 年
-              td クロステーブル 1,000 台販売達成
-            tr
-              th 平成 8 年
-              td 電極プリセッター、細穴放電加工機 ソディックＯＥＭとして販売開始
-            tr
-              th 平成 8 年
-              td
-                | NC クロステーブル販売開始
-                br
-                |  電極ホルダー販売開始
-            tr
-              th 平成 9 年
-              td マグネットチャック販売開始
-      #equipment.tab-pane
+  section#present1.container
+    .row
+      .col-sm-6.col-sm-offset-6
+        h2 永久磁石を用いた新製品の開発が得意です
+        p 1970年代から新製品が出ていなかった永久磁石式マグネットチャックの特許を取得
+        ul
+          li 特許第5716132取得
+          li 特願2015-201331申請中
+    .row
+      .col-sm-6
+        h2 精密化工機と同程度の精度ステージが可能
+        ul
+          li 岩手県工業技術センター 目黒技師と共同研究
+          li 岩手大学工学部 吉野准教授と共同研究
+        p XYZ100mmに対し直角度、平行度0.003mm以下(0.001mm)
+        p 磁石を扱う会社は大手がメインですが、中小企業で磁石の配列を構築している企業は大変少ないです
+  
+  section#present2.container
+    h1 サンアイ精機は年間４つ以上新製品を開発しています
+    .row
+      .col-sm-6
+        figure
+          img(src="images/", alt="")
+          figcaption
+            | 特許第5716132取得製品
+        p いわて県工業技術センター 目黒技師と共同研究の成従来従来の製品よりONの力が1.7倍、OFFの弱さが1/10
         .row
-          .col-md-12
-            table.table.table_design
-              thead
-                tr
-                  th 機械名
-                  th メーカー名
-                  th 能力
-                  th 台数
-              tbody
-                tr
-                  td 横型マシニングセンター
-                  td 三井精機
-                  td #5
-                  td 1 台
-                tr
-                  td 堅型マシニングセンター
-                  td 三井精機
-                  td #3
-                  td 1 台
-                tr
-                  td 堅型マシニングセンター
-                  td 浜井産業
-                  td #2
-                  td 1 台
-                tr
-                  td 堅型マシニングセンター
-                  td 山崎鉄工
-                  td #3
-                  td 1 台
-                tr
-                  td NC フライス盤
-                  td 浜井産業
-                  td #4
-                  td 1 台
-                tr
-                  td NC フライス盤
-                  td ワシノ
-                  td #3
-                  td 2 台
-                tr
-                  td NC 旋盤
-                  td 池貝鉄工
-                  td 6 尺
-                  td 1 台
-                tr
-                  td NC 旋盤
-                  td 山崎鉄工
-                  td 6 尺
-                  td 1 台
-                tr
-                  td NC 旋盤
-                  td 理研製鋼
-                  td クシ型
-                  td 1 台
-                tr
-                  td 放電加工機
-                  td アステック
-                  td Ａ22Ｍ/Ｐ2
-                  td 1 台
-                tr
-                  td 平面研削盤
-                  td 岡本工作
-                  td 600×500
-                  td 1 台
-                tr
-                  td 平面研削盤
-                  td 岡本工作
-                  td 1000×500
-                  td 1 台
-                tr
-                  td 平面研削盤
-                  td 黒田精工
-                  td 600×300
-                  td 1 台
-                tr
-                  td 円筒研削盤
-                  td 宮元製作所
-                  td 芯間 500
-                  td 1 台
-                tr
-                  td 成型研削盤
-                  td 日興機械
-                  td 515
-                  td 2 台
-                tr
-                  td 汎用フライス盤
-                  td マキノ、他
-                  td #1.5 ～ #2
-                  td 6 台
-                tr
-                  td 汎用旋盤
-                  td ワシノ、他
-                  td 5 尺 ～ 6 尺
-                  td 3 台
-                tr
-                  td 三次元測定器
-                  td 三豊
-                  td 600×700
-                  td 1 台
-  section#president.container
-    h1.title 社長あいさつ
-    dl.dl-horizontal
-      dt
-        img.title(src='images/yk_iwate_04.jpg', alt='社長')
-      dd
-        p
-          | ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー
-  section#access
-    .gmap_wrapper
-      #gmap
-      script(src='//maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places')
-      
+          .col-sm-6
+            figure
+              img(src="images/", alt="")
+          .col-sm-6
+            figure
+              img(src="images/", alt="")
+      .col-sm-6
+        figure
+          img(src="images/", alt="")
+          figcaption
+            | 特願2015-201331製品
+        p 
+          | 岩手大学工学部　吉野准教授との共同開発の成果
+          br
+          | 薄物(厚さ1mm以下)ワークに対して横滑り摩擦が3~4倍
+        .row
+          .col-sm-6
+            figure
+              img(src="images/", alt="")
+          .col-sm-6
+            figure
+              img(src="images/", alt="")
+        h2 永久磁石を用いた新製品の開発が得意です
+        p 1970年代から新製品が出ていなかった永久磁石式マグネットチャックの特許を取得
+        ul
+          li 特許第5716132取得
+          li 特願2015-201331申請中
+  
+  section#present3.container
+    h1 サンアイ精機は地域のサポ ートがあって成り立っています
+    figure
+      img(src="", alt="")
+      figcaption 様々なサポートを受け、新たな製品作りを行っております
+  
+  section#present4.container 
+    h1 サンアイ精機は常に新しいことにチャレンジします
+    .row
+      .col-sm-6.col-sm-offset-6
+        h2 リニアコーダー
+        p 永久磁石を利用して素粒子をコントロール
+    .row
+      .col-sm-6
+        h2 南部鉄瓶
+        p 

@@ -204,7 +204,9 @@ $(function(){
   //smooth scroll
   $('nav#navigation a').smoothScroll();
 
-	$('#container').hasClass('modify') && $("#navigation").removeClass("effect");;
+	$('#container').hasClass('modify') && $("#navigation").removeClass("effect");
+
+	$('#product a').matchHeight();
 /*
   $('.effect-left').onScreen({
     container: window,

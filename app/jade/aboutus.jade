@@ -1,0 +1,236 @@
+extend _template/_sanaisk
+
+block header_block
+  header.header
+    .bg-img
+    .topoverlay
+    a#video.player(data-property="{videoURL:'xNHY_DpDF8s',containment:'.bg-img', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, addRaster:false, quality:'default'}")
+    .title
+      figure.icon-mark
+      h1.icon-logo
+      h2 Be Your Partner
+    button.trigger(data-info='Click')
+      span Click
+
+block section_block
+  .title.text-center.top_contents
+    h1
+      img(src='images/sanai_logo.svg', alt='株式会社サンアイ精機', width='400')
+    h2
+      | We wanna 
+      span be your partner.
+    p あなたのパートナーでありたい。
+    p サンアイ精機はこれからも皆様に最適で様々なご提案をいたします。
+  section#staff.container
+    .push
+      h1.title スタッフ紹介
+      .row
+        .col-md-3
+          figure
+            img(src="http://placehold.it/350x150", alt="")
+            figcaption
+              | 社員名前
+        .col-md-3
+          figure
+            img(src="http://placehold.it/350x150", alt="")
+            figcaption
+              | 社員名前
+        .col-md-3
+          figure
+            img(src="http://placehold.it/350x150", alt="")
+            figcaption
+              | 社員名前
+        .col-md-3
+          figure
+            img(src="http://placehold.it/350x150", alt="")
+            figcaption
+              | 社員名前
+        .col-md-3
+          figure
+            img(src="http://placehold.it/350x150", alt="")
+            figcaption
+              | 社員名前
+        .col-md-3
+          figure
+            img(src="http://placehold.it/350x150", alt="")
+            figcaption
+              | 社員名前
+        .col-md-3
+          figure
+            img(src="http://placehold.it/350x150", alt="")
+            figcaption
+              | 社員名前
+        .col-md-3
+          figure
+            img(src="http://placehold.it/350x150", alt="")
+            figcaption
+              | 社員名前
+
+  section#company.container
+    h1.title 企業情報
+    ul.nav.nav-tabs
+      li.active
+        a(href='#summary', data-toggle='tab') 企業概要
+      li
+        a(href='#equipment', data-toggle='tab') 設備一覧
+    .tab-content
+      #summary.tab-pane.active
+        table.table.table_design
+          tbody
+            tr
+              th 社名
+              td 株式会社 サンアイ精機
+            tr
+              th 所在地
+              td 岩手県奥州市江刺区愛宕字金谷127番地の1
+            tr
+              th TEL
+              td 0197 - 35 - 5518
+            tr
+              th FAX
+              td 0197 - 35 - 5527
+            tr
+              th 資本金
+              td 5,000,000 円
+            tr
+              th 役員
+              td 代表取締役 菊地晋也
+            tr
+              th 従業員
+              td 男子 6人 女子 4 人 計 10 人
+            tr
+              th 主要取引先
+              td
+                | 株式会社 ソディック
+                br
+                |  株式会社 ソディックハイテック
+                br
+                |  株式会社 エロワ日本
+                br
+                |  システム・スリーアール日本
+                br
+                |  株式会社 ユアサ商事株式会社
+                br
+                |  株式会社 兼松KGK
+                br
+                |  株式会社 ミスミ
+                br
+                |  株式会社 ヤマモリ
+            tr
+              th 主要生産品目
+              td クロステーブル・電極プリセッター・永磁式マグネットチャック（標準型、超硬材用システム型、特殊型）・電極回転装置
+      #equipment.tab-pane
+        .row
+          .col-md-12
+            table.table.table_design
+              thead
+                tr
+                  th 機械名
+                  th メーカー名
+                  th 能力
+                  th 台数
+              tbody
+                tr
+                  td 横型マシニングセンター
+                  td 三井精機
+                  td #5
+                  td 1 台
+                tr
+                  td 堅型マシニングセンター
+                  td 三井精機
+                  td #3
+                  td 1 台
+                tr
+                  td 堅型マシニングセンター
+                  td 浜井産業
+                  td #2
+                  td 1 台
+                tr
+                  td 堅型マシニングセンター
+                  td 山崎鉄工
+                  td #3
+                  td 1 台
+                tr
+                  td NC フライス盤
+                  td 浜井産業
+                  td #4
+                  td 1 台
+                tr
+                  td NC フライス盤
+                  td ワシノ
+                  td #3
+                  td 2 台
+                tr
+                  td NC 旋盤
+                  td 池貝鉄工
+                  td 6 尺
+                  td 1 台
+                tr
+                  td NC 旋盤
+                  td 山崎鉄工
+                  td 6 尺
+                  td 1 台
+                tr
+                  td NC 旋盤
+                  td 理研製鋼
+                  td クシ型
+                  td 1 台
+                tr
+                  td 放電加工機
+                  td アステック
+                  td Ａ22Ｍ/Ｐ2
+                  td 1 台
+                tr
+                  td 平面研削盤
+                  td 岡本工作
+                  td 600×500
+                  td 1 台
+                tr
+                  td 平面研削盤
+                  td 岡本工作
+                  td 1000×500
+                  td 1 台
+                tr
+                  td 平面研削盤
+                  td 黒田精工
+                  td 600×300
+                  td 1 台
+                tr
+                  td 円筒研削盤
+                  td 宮元製作所
+                  td 芯間 500
+                  td 1 台
+                tr
+                  td 成型研削盤
+                  td 日興機械
+                  td 515
+                  td 2 台
+                tr
+                  td 汎用フライス盤
+                  td マキノ、他
+                  td #1.5 ～ #2
+                  td 6 台
+                tr
+                  td 汎用旋盤
+                  td ワシノ、他
+                  td 5 尺 ～ 6 尺
+                  td 3 台
+                tr
+                  td 三次元測定器
+                  td 三豊
+                  td 600×700
+                  td 1 台
+        
+        dl.dl-horizontal
+          dt
+            img.title(src='http://placehold.it/350x150', alt='')
+          dd
+            h1 準恒温室
+            p
+              | 製品の組み立て用に準恒温室を完備。精密に製品を組み立てるのに最適です。また各種精密ゲージ、直角スコヤ、スケールも完備
+  
+  section#access
+    .gmap_wrapper
+      #gmap
+      script(src='//maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places')
+      

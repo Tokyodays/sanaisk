@@ -19,6 +19,12 @@ a:hover {
 	color: $color_font;
 }
 #navigation {
+  .sns-nav {
+    li a {
+      padding-left: 7px;
+      padding-right: 7px;
+    }
+  }
   opacity: 1;
   .icon-facebook-square:before,
   .icon-twitter-square:before,
@@ -425,8 +431,14 @@ h3.title {
 
 }
 section {
-	padding: 80px 0;
+	padding: ms(3) 0;
   overflow: hidden;
+  .section_title {
+    color: $color_main;
+    margin-top: ms(2);
+    margin-bottom: ms(2);
+    text-align: center;
+  }
 }
 section#president {
 	.dl-horizontal dt {
@@ -479,6 +491,12 @@ footer {
 Portfolio
 ========================================================================== */
 #product {
+  .product_image {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
   a {
     display: block;
     margin-bottom: 30px;
@@ -544,7 +562,6 @@ Portfolio
   	transition: all 0.5s;
   	-webkit-transition: all 0.5s;
   	-moz-transition: all 0.5s;
-  	-o-transition: all 0.5s;
   }
 
   a.close-overlay {
@@ -586,7 +603,6 @@ Portfolio
   			-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   			transition: opacity 0.35s, transform 0.35s;
   			-moz-transition: opacity 0.35s, -moz-transform 0.35s;
-  			-o-transition: opacity 0.35s, -o-transform 0.35s;
   			-webkit-transform: translate3d(-20px, 0, 0);
   			transform: translate3d(-20px, 0, 0);
   			-ms-transform: translate3d(-20px, 0, 0);
@@ -618,7 +634,7 @@ Portfolio
   		height: 100%;
   		opacity: 1;
   	}
-}
+  }
 
 }
 
