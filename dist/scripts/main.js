@@ -140,8 +140,12 @@
 		classie.add( container, 'modify' );
 	}
 
-	window.addEventListener( 'scroll', scrollPage );
-	trigger.addEventListener( 'click', function() { toggle( 'reveal' ); } );
+	if($('.intro-effect-push').length){
+		window.addEventListener( 'scroll', scrollPage );
+		trigger.addEventListener( 'click', function() { toggle( 'reveal' ); } );
+	} else {
+		$('#navigation').removeClass('effect')
+	}
 })();
 
 (function(win, doc) {
