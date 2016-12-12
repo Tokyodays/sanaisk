@@ -1,0 +1,618 @@
+@import "variables";
+
+@font-face {
+  font-family: 'sanaisk';
+  src:  url('#{$icomoon-font-path}/sanaisk.eot?73c9f6');
+  src:  url('#{$icomoon-font-path}/sanaisk.eot?73c9f6#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/sanaisk.ttf?73c9f6') format('truetype'),
+    url('#{$icomoon-font-path}/sanaisk.woff?73c9f6') format('woff'),
+    url('#{$icomoon-font-path}/sanaisk.svg?73c9f6#sanaisk') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'sanaisk' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-mouse {
+  &:before {
+    content: $icon-mouse;
+  }
+}
+.icon-crosstable .path1 {
+  &:before {
+    content: $icon-crosstable-path1;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-crosstable .path2 {
+  &:before {
+    content: $icon-crosstable-path2;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-crosstable .path3 {
+  &:before {
+    content: $icon-crosstable-path3;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-crosstable .path4 {
+  &:before {
+    content: $icon-crosstable-path4;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-crosstable .path5 {
+  &:before {
+    content: $icon-crosstable-path5;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-crosstable .path6 {
+  &:before {
+    content: $icon-crosstable-path6;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-crosstable .path7 {
+  &:before {
+    content: $icon-crosstable-path7;  
+    margin-left: -1em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.icon-crosstable .path8 {
+  &:before {
+    content: $icon-crosstable-path8;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-crosstable .path9 {
+  &:before {
+    content: $icon-crosstable-path9;  
+    margin-left: -1em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.icon-crosstable .path10 {
+  &:before {
+    content: $icon-crosstable-path10;  
+    margin-left: -1em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.icon-crosstable .path11 {
+  &:before {
+    content: $icon-crosstable-path11;  
+    margin-left: -1em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.icon-crosstable .path12 {
+  &:before {
+    content: $icon-crosstable-path12;  
+    margin-left: -1em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.icon-crosstable .path13 {
+  &:before {
+    content: $icon-crosstable-path13;  
+    margin-left: -1em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.icon-crosstable .path14 {
+  &:before {
+    content: $icon-crosstable-path14;  
+    margin-left: -1em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.icon-crosstable .path15 {
+  &:before {
+    content: $icon-crosstable-path15;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-crosstable .path16 {
+  &:before {
+    content: $icon-crosstable-path16;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-crosstable .path17 {
+  &:before {
+    content: $icon-crosstable-path17;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-crosstable .path18 {
+  &:before {
+    content: $icon-crosstable-path18;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-crosstable .path19 {
+  &:before {
+    content: $icon-crosstable-path19;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-crosstable .path20 {
+  &:before {
+    content: $icon-crosstable-path20;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-crosstable .path21 {
+  &:before {
+    content: $icon-crosstable-path21;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-crosstable .path22 {
+  &:before {
+    content: $icon-crosstable-path22;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-crosstable .path23 {
+  &:before {
+    content: $icon-crosstable-path23;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-crosstable .path24 {
+  &:before {
+    content: $icon-crosstable-path24;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-crosstable .path25 {
+  &:before {
+    content: $icon-crosstable-path25;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-crosstable .path26 {
+  &:before {
+    content: $icon-crosstable-path26;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-crosstable .path27 {
+  &:before {
+    content: $icon-crosstable-path27;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-crosstable .path28 {
+  &:before {
+    content: $icon-crosstable-path28;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-crosstable .path29 {
+  &:before {
+    content: $icon-crosstable-path29;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-crosstable .path30 {
+  &:before {
+    content: $icon-crosstable-path30;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-crosstable .path31 {
+  &:before {
+    content: $icon-crosstable-path31;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-crosstable .path32 {
+  &:before {
+    content: $icon-crosstable-path32;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-crosstable .path33 {
+  &:before {
+    content: $icon-crosstable-path33;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-crosstable .path34 {
+  &:before {
+    content: $icon-crosstable-path34;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-crosstable .path35 {
+  &:before {
+    content: $icon-crosstable-path35;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-crosstable .path36 {
+  &:before {
+    content: $icon-crosstable-path36;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-crosstable .path37 {
+  &:before {
+    content: $icon-crosstable-path37;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-crosstable .path38 {
+  &:before {
+    content: $icon-crosstable-path38;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-crosstable .path39 {
+  &:before {
+    content: $icon-crosstable-path39;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-crosstable .path40 {
+  &:before {
+    content: $icon-crosstable-path40;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-crosstable .path41 {
+  &:before {
+    content: $icon-crosstable-path41;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-crosstable .path42 {
+  &:before {
+    content: $icon-crosstable-path42;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-crosstable .path43 {
+  &:before {
+    content: $icon-crosstable-path43;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-crosstable .path44 {
+  &:before {
+    content: $icon-crosstable-path44;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-crosstable .path45 {
+  &:before {
+    content: $icon-crosstable-path45;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-crosstable .path46 {
+  &:before {
+    content: $icon-crosstable-path46;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-crosstable .path47 {
+  &:before {
+    content: $icon-crosstable-path47;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-crosstable .path48 {
+  &:before {
+    content: $icon-crosstable-path48;  
+    margin-left: -1em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.icon-logo {
+  &:before {
+    content: $icon-logo;
+  }
+}
+.icon-logomark .path1 {
+  &:before {
+    content: $icon-logomark-path1;  
+    color: rgb(0, 0, 0);
+  }
+}
+.icon-logomark .path2 {
+  &:before {
+    content: $icon-logomark-path2;  
+    margin-left: -4.302734375em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.icon-logomark .path3 {
+  &:before {
+    content: $icon-logomark-path3;  
+    margin-left: -4.302734375em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.icon-logomark .path4 {
+  &:before {
+    content: $icon-logomark-path4;  
+    margin-left: -4.302734375em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.icon-logomark .path5 {
+  &:before {
+    content: $icon-logomark-path5;  
+    margin-left: -4.302734375em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.icon-logomark .path6 {
+  &:before {
+    content: $icon-logomark-path6;  
+    margin-left: -4.302734375em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.icon-logomark .path7 {
+  &:before {
+    content: $icon-logomark-path7;  
+    margin-left: -4.302734375em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.icon-logomark .path8 {
+  &:before {
+    content: $icon-logomark-path8;  
+    margin-left: -4.302734375em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.icon-logomark .path9 {
+  &:before {
+    content: $icon-logomark-path9;  
+    margin-left: -4.302734375em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.icon-logomark .path10 {
+  &:before {
+    content: $icon-logomark-path10;  
+    margin-left: -4.302734375em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.icon-logomark .path11 {
+  &:before {
+    content: $icon-logomark-path11;  
+    margin-left: -4.302734375em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.icon-logomark .path12 {
+  &:before {
+    content: $icon-logomark-path12;  
+    margin-left: -4.302734375em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.icon-logomark .path13 {
+  &:before {
+    content: $icon-logomark-path13;  
+    margin-left: -4.302734375em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.icon-logomark .path14 {
+  &:before {
+    content: $icon-logomark-path14;  
+    margin-left: -4.302734375em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.icon-logomark .path15 {
+  &:before {
+    content: $icon-logomark-path15;  
+    margin-left: -4.302734375em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.icon-logomark .path16 {
+  &:before {
+    content: $icon-logomark-path16;  
+    margin-left: -4.302734375em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.icon-logomark .path17 {
+  &:before {
+    content: $icon-logomark-path17;  
+    margin-left: -4.302734375em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.icon-logomark .path18 {
+  &:before {
+    content: $icon-logomark-path18;  
+    margin-left: -4.302734375em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.icon-logomark .path19 {
+  &:before {
+    content: $icon-logomark-path19;  
+    margin-left: -4.302734375em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.icon-logomark .path20 {
+  &:before {
+    content: $icon-logomark-path20;  
+    margin-left: -4.302734375em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.icon-logomark .path21 {
+  &:before {
+    content: $icon-logomark-path21;  
+    margin-left: -4.302734375em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.icon-logomark .path22 {
+  &:before {
+    content: $icon-logomark-path22;  
+    margin-left: -4.302734375em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.icon-logomark .path23 {
+  &:before {
+    content: $icon-logomark-path23;  
+    margin-left: -4.302734375em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.icon-logomark .path24 {
+  &:before {
+    content: $icon-logomark-path24;  
+    margin-left: -4.302734375em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.icon-logomark .path25 {
+  &:before {
+    content: $icon-logomark-path25;  
+    margin-left: -4.302734375em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.icon-logomark .path26 {
+  &:before {
+    content: $icon-logomark-path26;  
+    margin-left: -4.302734375em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.icon-logomark .path27 {
+  &:before {
+    content: $icon-logomark-path27;  
+    margin-left: -4.302734375em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.icon-logomark .path28 {
+  &:before {
+    content: $icon-logomark-path28;  
+    margin-left: -4.302734375em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.icon-logomark .path29 {
+  &:before {
+    content: $icon-logomark-path29;  
+    margin-left: -4.302734375em;  
+    color: rgb(98, 131, 181);
+  }
+}
+.icon-logomark .path30 {
+  &:before {
+    content: $icon-logomark-path30;  
+    margin-left: -4.302734375em;  
+    color: rgb(98, 131, 181);
+  }
+}
+.icon-mark {
+  &:before {
+    content: $icon-mark;
+  }
+}
+.icon-twitter-square {
+  &:before {
+    content: $icon-twitter-square;
+  }
+}
+.icon-facebook-square {
+  &:before {
+    content: $icon-facebook-square;
+  }
+}
+.icon-linkedin-square {
+  &:before {
+    content: $icon-linkedin-square;
+  }
+}
+.icon-angle-down {
+  &:before {
+    content: $icon-angle-down;
+  }
+}
+.icon-search {
+  &:before {
+    content: $icon-search;
+  }
+}
+.icon-arrow-down {
+  &:before {
+    content: $icon-arrow-down;
+  }
+}
+

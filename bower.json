@@ -2,7 +2,7 @@
   "name": "sanaisk",
   "private": true,
   "dependencies": {
-    "bootstrap-sass-official": "*",
+    "bootstrap-sass-official": "~3.3.7",
     "jquery": "*",
     "jquery.mb.ytplayer": "*",
     "waypoints": "*",

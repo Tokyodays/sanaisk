@@ -13,16 +13,17 @@
 		el.innerHTML = '<span style="font-family: \'sanaisk\'">' + entity + '</span>' + html;
 	}
 	var icons = {
+		'icon-mouse': '&#xe930;',
 		'icon-crosstable': '&#xe900;',
 		'icon-logo': '&#xe600;',
 		'icon-logomark': '&#xe601;',
 		'icon-mark': '&#xe61f;',
-		'icon-search': '&#xe036;',
-		'icon-arrow-down': '&#xe097;',
 		'icon-twitter-square': '&#xf081;',
 		'icon-facebook-square': '&#xf082;',
 		'icon-linkedin-square': '&#xf08c;',
 		'icon-angle-down': '&#xf107;',
+		'icon-search': '&#xe036;',
+		'icon-arrow-down': '&#xe097;',
 		'0': 0
 		},
 		els = document.getElementsByTagName('*'),
