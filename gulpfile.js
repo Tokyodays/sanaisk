@@ -70,7 +70,7 @@ gulp.task('clean', function () {
 gulp.task('build', gulpSequence('clean', 'bowercopy', 'jade', 'images', ['icomoon', 'icostyle'], 'styles', 'scripts'));
 
 gulp.task('default', ['watch'], function () {
-    //gulp.start('build');
+  gulp.start('build');
 });
 
 gulp.task('serve', ['build'], function () {

@@ -4,23 +4,16 @@ block header_block
   header.header
     .bg-img
     .topoverlay
-    a#video.player(data-property="{videoURL:'xNHY_DpDF8s',containment:'.bg-img', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, addRaster:false, quality:'default'}")
+    //a#video.player(data-property="{videoURL:'xNHY_DpDF8s',containment:'.bg-img', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, addRaster:false, quality:'default'}")
     .title
       figure.icon-mark
       h1.icon-logo
       h2 Be Your Partner
-    button.trigger(data-info='Click')
-      span Click
+    button.trigger(data-info='Page Scroll')
+      span.mouse
+      span.scroll Page Scroll
 
 block section_block
-  .title.text-center.top_contents
-    h1
-      img(src='images/sanai_logo.svg', alt='株式会社サンアイ精機', width='400')
-    h2
-      | We wanna 
-      span be your partner.
-    p あなたのパートナーでありたい。
-    p それを弊社のスローガンにしています的なダミーテキスト
   section#product.content.container
     .push
       h1.section_title
@@ -98,60 +91,62 @@ block section_block
                     | View More
               h3 超硬用マグネットチャック
               h4 小物用、薄物用、超硬用マグネットチャック。あなたのニーズにお答えします
-  section#present1.container
-    .row
-      .col-sm-6.col-sm-offset-6
-        h2 永久磁石を用いた新製品の開発が得意です
-        p 1970年代から新製品が出ていなかった永久磁石式マグネットチャックの特許を取得
-        ul
-          li 特許第5716132取得
-          li 特願2015-201331申請中
-    .row
-      .col-sm-6
-        h2 精密化工機と同程度の精度ステージが可能
-        ul
-          li 岩手県工業技術センター 目黒技師と共同研究
-          li 岩手大学工学部 吉野准教授と共同研究
-        p XYZ100mmに対し直角度、平行度0.003mm以下(0.001mm)
-        p 磁石を扱う会社は大手がメインですが、中小企業で磁石の配列を構築している企業は大変少ないです
+  section#present1
+    .container
+      .row
+        .col-sm-6.col-sm-offset-6
+          h3 永久磁石を用いた新製品の開発が得意です
+          p 1970年代から新製品が出ていなかった永久磁石式マグネットチャックの特許を取得
+          ul
+            li 特許第5716132取得
+            li 特願2015-201331申請中
+      .row
+        .col-sm-6
+          h3 精密化工機と同程度の精度ステージが可能
+          ul
+            li 岩手県工業技術センター 目黒技師と共同研究
+            li 岩手大学工学部 吉野准教授と共同研究
+          p XYZ100mmに対し直角度、平行度0.003mm以下(0.001mm)
+          p 磁石を扱う会社は大手がメインですが、中小企業で磁石の配列を構築している企業は大変少ないです
   
-  section#present2.container
-    h1 サンアイ精機は年間４つ以上新製品を開発しています
-    .row
-      .col-sm-6
-        figure
-          img(src="images/", alt="")
-          figcaption
-            | 特許第5716132取得製品
-        p いわて県工業技術センター 目黒技師と共同研究の成従来従来の製品よりONの力が1.7倍、OFFの弱さが1/10
-        .row
-          .col-sm-6
-            figure
-              img(src="images/", alt="")
-          .col-sm-6
-            figure
-              img(src="images/", alt="")
-      .col-sm-6
-        figure
-          img(src="images/", alt="")
-          figcaption
-            | 特願2015-201331製品
-        p 
-          | 岩手大学工学部　吉野准教授との共同開発の成果
-          br
-          | 薄物(厚さ1mm以下)ワークに対して横滑り摩擦が3~4倍
-        .row
-          .col-sm-6
-            figure
-              img(src="images/", alt="")
-          .col-sm-6
-            figure
-              img(src="images/", alt="")
-        h2 永久磁石を用いた新製品の開発が得意です
-        p 1970年代から新製品が出ていなかった永久磁石式マグネットチャックの特許を取得
-        ul
-          li 特許第5716132取得
-          li 特願2015-201331申請中
+  section#present2
+    .container
+      h1 サンアイ精機は年間４つ以上新製品を開発しています
+      .row
+        .col-sm-6
+          figure
+            img(src="images/", alt="")
+            figcaption
+              | 特許第5716132取得製品
+          p いわて県工業技術センター 目黒技師と共同研究の成従来従来の製品よりONの力が1.7倍、OFFの弱さが1/10
+          .row
+            .col-sm-6
+              figure
+                img(src="images/", alt="")
+            .col-sm-6
+              figure
+                img(src="images/", alt="")
+        .col-sm-6
+          figure
+            img(src="images/", alt="")
+            figcaption
+              | 特願2015-201331製品
+          p 
+            | 岩手大学工学部　吉野准教授との共同開発の成果
+            br
+            | 薄物(厚さ1mm以下)ワークに対して横滑り摩擦が3~4倍
+          .row
+            .col-sm-6
+              figure
+                img(src="images/", alt="")
+            .col-sm-6
+              figure
+                img(src="images/", alt="")
+          h2 永久磁石を用いた新製品の開発が得意です
+          p 1970年代から新製品が出ていなかった永久磁石式マグネットチャックの特許を取得
+          ul
+            li 特許第5716132取得
+            li 特願2015-201331申請中
   
   section#present3.container
     h1 サンアイ精機は地域のサポ ートがあって成り立っています

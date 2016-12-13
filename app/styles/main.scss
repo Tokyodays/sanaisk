@@ -1,11 +1,11 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 
 // bower:scss
-@import "../bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
 @import "../bower_components/modular-scale/stylesheets/modular-scale";
+@import '../bower_components/bourbon/app/assets/stylesheets/bourbon';
 // endbower
 
-@import '../bower_components/bourbon/app/assets/stylesheets/bourbon';
 
 
 @import "style.css";

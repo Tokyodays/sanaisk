@@ -235,21 +235,21 @@ a:hover {
 
 /* Trigger Button */
 button.trigger {
-	position: fixed;
-	bottom: 40px;
+	position: absolute;
+	bottom: 90px;
 	left: 50%;
 	z-index: 5000;
 	display: block;
 	margin-left: -1em;
 	padding: 0;
 	width: 2em;
-	height: 2em;
+	height: 1.2em;
 	border: none;
 	background: transparent;
 	color: transparent;
 	font-size: 2em;
 	cursor: pointer;
-	@include animation(top_click 1.2s ease 1 4s both);
+	@include animation(top_click 1.2s ease 1 2s both);
 	&:before {
 		position: absolute;
 		bottom: 100%;
@@ -261,6 +261,7 @@ button.trigger {
 		font-size: 20px;
 		-webkit-backface-visibility: hidden;
 		backface-visibility: hidden;
+	  @include animation(top_click 1.2s ease 1 1.5s both);
 	}
 
 	&:focus {
@@ -273,7 +274,26 @@ button.trigger {
 		overflow: hidden;
 		width: 100%;
 		height: 100%;
-		&:before {
+		&.mouse:before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			color: #fff;
+			content: "\e930";
+			text-transform: none;
+			font-weight: normal;
+			font-style: normal;
+			font-variant: normal;
+			font-family: 'sanaisk';
+			font-size: 30px;
+			line-height: 1;
+			speak: none;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+		&.scroll:before {
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -291,8 +311,9 @@ button.trigger {
 			speak: none;
 			-webkit-font-smoothing: antialiased;
 			-moz-osx-font-smoothing: grayscale;
-			@include animation(top_click_arrow 1.2s ease infinite 4.5s both);
+			@include animation(top_click_arrow 1.2s ease infinite 2.5s both);
 		}
+
 	}
 }
 
@@ -638,6 +659,11 @@ Portfolio
 
 }
 
+
+#present2 {
+  background-color: $color_second1;
+  color: #fff;
+}
 /* ==========================================================================
 customize
 ========================================================================== */
