@@ -27,7 +27,8 @@
 	<title>youtube Chromeless Player - mb.YTPlayer</title>
 	<link href='http://fonts.googleapis.com/css?family=Lekton|Lobster' rel='stylesheet' type='text/css'>
 	<link href="css/jquery.mb.YTPlayer.min.css?_bn={{ buildnum }}" media="all" rel="stylesheet" type="text/css">
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
+	<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.js"></script>-->
+	<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
 	<script src="jquery.mb.YTPlayer.min.js?_bn={{ buildnum }}"></script>
 	<script src="../examples/assets/apikey.js"></script>
 	<style>
@@ -400,8 +401,8 @@
 		<br>
 		<br>
 		<h1 style="color:white">jQuery.mb.YTPlayer</h1>
-		<h2 style="color:white; text-align: center">An HTML5 Background player
-			<br>for YouTube videos</h2>
+		<h2 style="color:white; text-align: center">An HTML5 Background player</h2>
+		<br>for YouTube videos</h2>
 		<div id="filtersControl">
 			<h2 style="color:white">Apply filters</h2>
 			<h3 style="color: white">* Does not work in IE.</h3>
@@ -440,6 +441,11 @@
 				<span>blur</span>
 			</div>
 			<div id="filterScript"></div>
+
+			<h2 style="color:white">Apply mask</h2>
+			<button class="command" onclick="jQuery('#bgndVideo').YTPAddMask('../examples/assets/mask-1.png')">Add mask</button>
+			<button class="command" onclick="jQuery('#bgndVideo').YTPRemoveMask()">Remove mask</button>
+
 		</div>
 		<div id="changeVideo">
 			<h2 style="color:white">Change video</h2>
@@ -478,8 +484,10 @@
 			<a class="button" href="https://github.com/pupunzi/jquery.mb.YTPlayer/wiki" target="_blank">See the doc</a>
 			<a class="button" href="http://pupunzi.open-lab.com/mb-jquery-components/jquery-mb-ytplayer" target="_blank">Download it</a>
 		</div>
-		<a style="position: fixed;bottom:40px;right: 30px;" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=V6ZS8JPMZC446&lc=GB&item_name=mb%2eideas&item_number=MBIDEAS&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG_global%2egif%3aNonHosted">
-			<img border="0" alt="PayPal" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG_global.gif" class="alignright"> </a>
+
+		<a style="position: fixed;bottom:40px;right: 30px;" href="http://pupunzi.open-lab.com/consider-a-donation/" target="_blank">
+			<img border="0" alt="PayPal" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG_global.gif" class="alignright">
+		</a>
 
 		<!--7SnmCUwOsts-->
 		<!--BsekcY04xvQ-->
