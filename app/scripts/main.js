@@ -149,7 +149,7 @@
 })();
 
 (function(win, doc) {
-  if ($('#gmap').size()) {
+  if ($('#gmap').length) {
     var request = {
       placeId: 'ChIJlfzkL8hLj18R_M1MhUnKXqg'
     };

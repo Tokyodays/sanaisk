@@ -1,7 +1,6 @@
 @charset "utf-8";
-
 body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6  {
-  font-family:"游明朝体", "Yu Mincho", YuMincho, _sans_selif;
+  font-family: ‘Noto Sans Japanese’;
   text-shadow:0px 0px 1px rgba(150,150,150,.1);
 }
 
@@ -329,6 +328,14 @@ button.trigger {
 	transition-delay: 0s;
 }
 
+/* -------------------------- */
+/* toppage */
+/* -------------------------- */
+#present1 {
+  background-color: $color-main;
+  color: white;
+}
+
 
 /* -------------------------- */
 /* Push */
@@ -457,8 +464,9 @@ section {
   .section_title {
     color: $color_main;
     margin-top: ms(2);
-    margin-bottom: ms(2);
+    margin-bottom: ms(1);
     text-align: center;
+    font-size: ms(2);
   }
 }
 section#president {
@@ -533,6 +541,7 @@ Portfolio
   }
   h3 {
     color: $color_main;
+    font-size: ms(1);
     a:link,
     a:visited,
     a:hover {
@@ -541,6 +550,7 @@ Portfolio
   }
   h4 {
     color: $color_font;
+    font-size: ms(0);
     a:link,
     a:visited,
     a:hover {

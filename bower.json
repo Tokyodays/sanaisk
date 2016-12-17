@@ -10,6 +10,7 @@
     "modular-scale": "~2.1.1",
     "bourbon": "~4.2.6",
     "jquery-localize": "jquery.localize#^0.1.2",
-    "matchHeight": "^0.7.0"
+    "matchHeight": "^0.7.0",
+    "animate.css": "^3.5.2"
   }
 }
