@@ -332,8 +332,23 @@ button.trigger {
 /* toppage */
 /* -------------------------- */
 #present1 {
+  article#a1 {
   background-color: $color-main;
+  background-image: url(/images/p1_1.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
   color: white;
+  }
+  article#a2 {
+  background-color: $color-main;
+  background-image: url(/images/p1_2.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  color: white;
+  }
 }
 
 
