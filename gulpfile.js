@@ -40,6 +40,7 @@ gulp.task('jade', function() {
   return gulp.src('app/jade/*.jade')
     .pipe($.jade())
     .pipe(gulp.dest('dist/'))
+    .pipe(reload({stream:true}))
 });
 
 gulp.task('images', function () {
@@ -81,7 +82,16 @@ gulp.task('serve', ['build'], function () {
         },
         debugInfo: true,
         open: true,
-        xip: true
+        xip: true,
+        middleware: [
+          function (req, res, next) {
+            if(req.url.match(/\.svgz$/)) {
+              res.setHeader('Content-Encoding', 'gzip');
+            }
+
+            next();
+          }
+        ]
     });
 });
 

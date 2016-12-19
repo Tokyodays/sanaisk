@@ -332,25 +332,69 @@ button.trigger {
 /* toppage */
 /* -------------------------- */
 #present1 {
+  padding: 0;
+  .text_left {
+    padding-right: ms(0);
+  }
+  .text_right {
+    padding-left: ms(0);
+  }
+  article {
+    background-color: $color-main;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: white;
+    padding: ms(3);
+    h3 {
+      font-size: ms(1);
+      line-height: ms(1);
+    }
+    p {
+      font-size: ms(0);
+      line-height: ms(1);
+    }
+  }
   article#a1 {
-  background-color: $color-main;
-  background-image: url(/images/p1_1.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  color: white;
+    background-image: url(/images/p1_1.png);
+
   }
   article#a2 {
-  background-color: $color-main;
-  background-image: url(/images/p1_2.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+    background-image: url(/images/p1_2.png);
+  }
 
-  color: white;
+}
+#present2 {
+  h1 {
+    font-size: ms(2);
+    line-height: ms(1);
+  }
+  figure {
+    img {
+      width: 100%;
+    }
   }
 }
 
+#present3 {
+  background-color: lighten($color_main, 30%);
+  h1 {
+    font-size: ms(2);
+    line-height: ms(1);
+  }
+  figure {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+}
+
+#present4 {
+  h1 {
+    font-size: ms(2);
+    line-height: ms(1);
+  }
+}
 
 /* -------------------------- */
 /* Push */
