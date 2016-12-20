@@ -1,0 +1,192 @@
+// ==========================================================================
+// Addtional CSS
+// ==========================================================================
+// Font Style
+$font-size-set: 0,8,9,10,11,12,13,14,15,16,18,20,22,24,26,28,30,32,36,48,60,72;  // Preset Font Size (Unit: pixel)
+$font-size-default: 14; // Default Font Size  (Unit: pixel)
+
+.a-fb {
+	font-weight: bold !important;
+}
+.a-fi {
+	font-style: italic !important;
+}
+.a-fn {
+	font-style: normal !important;
+	font-weight: normal !important;
+}
+
+
+// Font Size
+@each $s in $font-size-set {
+	.a-fs#{$s} {
+		font-size: $s * 1px;
+	}
+}
+
+// Text Align
+.a-tal {
+	text-align: left !important;
+}
+.a-tac {
+	text-align: center !important;
+}
+.a-tar {
+	text-align: right !important;
+}
+.a-vat {
+	vertical-align: top !important;
+}
+.a-vam {
+	vertical-align: middle !important;
+}
+.a-vab {
+	vertical-align: bottom !important;
+}
+
+// Margin, Padding
+@each $i in 0, 3, 4, 5, 8, 10, 12, 15, 16, 20, 24, 25, 28, 30, 32, 35, 36, 40, 45, 48, 50, 60, 64, 72, 75, 80, 84, 96, 100 {
+	.a-m#{$i} {
+		margin: $i + 0px !important;
+	}
+	.a-p#{$i} {
+		padding: $i + 0px !important;
+	}
+	@each $p in t, r, b, l, h, v {
+		$pName: '';
+		@if $p == t {
+			$pName: top;
+		} @else if $p == r {
+			$pName: right;
+		} @else if $p == b {
+			$pName: bottom;
+		} @else if $p == l {
+			$pName: left;
+		}
+		.a-m#{$p}#{$i} {
+			@if $p == h {
+				margin-left: $i + 0px !important;
+				margin-right: $i + 0px !important;
+			} @else if $p == v {
+				margin-top: $i + 0px !important;
+				margin-bottom: $i + 0px !important;
+			} @else {
+				margin-#{$pName}: $i + 0px !important;
+			}
+		}
+		.a-p#{$p}#{$i} {
+			@if $p == h {
+				padding-left: $i + 0px !important;
+				padding-right: $i + 0px !important;
+			} @else if $p == v {
+				padding-top: $i + 0px !important;
+				padding-bottom: $i + 0px !important;
+			} @else {
+				padding-#{$pName}: $i + 0px !important;
+			}
+		}
+	}
+}
+
+// Float
+.a-fll{
+	float: left !important;
+}
+.a-flr{
+	float: right !important;
+}
+.a-fln{
+	float: none !important;
+}
+.a-cf {
+	overflow: hidden !important;
+}
+.a-pcf:after {
+	content: "" !important;
+	display: table !important;
+	clear: both !important;
+}
+
+// No Wrap
+.a-nowrap {
+	white-space: nowrap !important;
+}
+
+// Display
+.a-dib {
+	display: block !important;
+}
+.a-dii {
+	display: inline !important;
+}
+.a-diib {
+	display: inline-block !important;
+}
+.a-din {
+	display: none !important;
+}
+
+// Position
+.a-pabslt {
+	position:absolute;
+	left:0;
+	top:0;
+}
+.a-pabsct {
+	position:absolute;
+	left:50%;
+	top:0;
+}
+.a-pabsrt {
+	position:absolute;
+	right:0;
+	top:0;
+}
+.a-pabslm {
+	position:absolute;
+	left:0;
+	top:50%;
+}
+.a-pabsrm {
+	position:absolute;
+	right:0;
+	top:50%;
+}
+.a-pabslb {
+	position:absolute;
+	left:0;
+	bottom:0;
+}
+.a-pabscb {
+	position:absolute;
+	left:50%;
+	bottom:0;
+}
+.a-pabsrb {
+	position:absolute;
+	right:0;
+	bottom:0;
+}
+.a-prel {
+	position:relative;
+}
+
+// width
+@each $e in 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100 {
+	.a-w#{$e}p {
+		width: $e + 0%;
+	}
+}
+$e : null;
+
+//TableCell
+.a-dt{
+	display:table;
+}
+.a-dtr{
+	display: table-row;
+}
+.a-dtc{
+	display: table-cell;
+	vertical-align: middle;
+}
