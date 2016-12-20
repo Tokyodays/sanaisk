@@ -28,7 +28,7 @@
     <link href='http://fonts.googleapis.com/css?family=Lekton|Lobster' rel='stylesheet' type='text/css'>
     <link href="../dist/css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
     <script src="../dist/jquery.mb.YTPlayer.min.js"></script>
     <script src="assets/apikey.js"></script>
     <style>
@@ -103,17 +103,19 @@
 
     <div style="padding: 20px; text-align: center">
         <button onclick="jQuery('#video').YTPFullscreen()">go fullscreen</button>
+        <button onclick="myPlayer.YTPtoggleFilter('grayscale', 100)">toggle black and white</button>
+
     </div>
 
 
 </div>
 <!--qvuILbcXlg8 , https://www.youtube.com/watch?v=FYXMghecCNg-->
-<div id="video" class="player" data-property="{videoURL:'qvuILbcXlg8',containment:'#customElement', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, addRaster:true, quality:'default'}">My video</div> <!--BsekcY04xvQ-->
+<div id="video" class="player" data-property="{videoURL:'FYXMghecCNg',containment:'#customElement', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, addRaster:true, quality:'default'}">My video</div> <!--BsekcY04xvQ-->
 
 
-<a style="position: fixed;bottom:40px;right: 30px;" href="http://pupunzi.open-lab.com/consider-a-donation/" target="_blank">
-  <img border="0" alt="PayPal" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG_global.gif" class="alignright">
-</a>
+<a style="position: fixed;bottom:20px;right: 20px; z-index: 1"
+   href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=V6ZS8JPMZC446&lc=GB&item_name=mb%2eideas&item_number=MBIDEAS&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG_global%2egif%3aNonHosted"><img
+        border="0" alt="PayPal" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG_global.gif" class="alignright"></a>
 
 </body>
 </html>

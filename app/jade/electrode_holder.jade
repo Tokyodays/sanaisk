@@ -3,12 +3,15 @@ extend _template/_sanaisk
 block header_block
   header.header
     .bg-img
+      img(src="/images/holder_top.png", alt="")
     .topoverlay
-    a#video.player(data-property="{videoURL:'xNHY_DpDF8s',containment:'.bg-img', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, addRaster:false, quality:'default'}")
+    //- a#video.player(data-property="{videoURL:'xNHY_DpDF8s',containment:'.bg-img', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, addRaster:false, quality:'default'}")
     .title
       h1 電極ホルダー
-    button.trigger(data-info='Click')
-      span Click
+      h2 ワンランク上の精度を目指すユーザーへ
+    button.trigger(data-info='Page Scroll')
+      span.mouse
+      span.scroll Page Scroll
 
 block section_block
   .title.text-center.top_contents
@@ -20,29 +23,29 @@ block section_block
       li 独特な機構により調整が容易です。
       li EROWA、system 3R 両社のチャッキングツールに対応します。
       li コンパクトで極軽量化を図り放電加工機のリニア制御時代に対応しております。
-      
+            
   section#product.container
     .push
-      .row
+      .row.holder_hold
         .col-xs-4
           h2 V
           figure
-            img(src="https://placehold.jp/150x150.png", alt="")
+            img(src="/images/holder_v.png", alt="", class="img-responsive")
           p V字型のホルダーに電極を挟み込みます。形、大きさを問わず、色々な電極に対応可能です。
         .col-xs-4
           h2 U
           figure
-            img(src="https://placehold.jp/150x150.png", alt="")
+            img(src="/images/holder_u.png", alt="", class="img-responsive")
           p 薄い形をした電極に適しています。
         .col-xs-4
           h2 EYC
           figure
-            img(src="https://placehold.jp/150x150.png", alt="")
+            img(src="/images/holder_eyc.png", alt="", class="img-responsive")
           p ホルダーの中心で固定できます。中心値を取りたい場合に有効です。丸型の電極のみ適応可能です。
     .row
       .col-md-3
         figure.product_image
-          img(src='/images/presetter.png', alt="")
+          img(src='/images/STM-05-VU-AL.png', alt="", class="img-responsive")
       .col-md-9
         h2 STM-05-V(U)-AL
         h5 コンパクトで超軽量です
@@ -63,7 +66,7 @@ block section_block
     .row
       .col-md-3
         figure.product_image
-          img(src='/images/presetter.png', alt="")
+          img(src='/images/STM-05-VU.png', alt="", class="img-responsive")
       .col-md-9
         h2 STM-05-V(U)
         h5 コンパクトです
@@ -84,7 +87,7 @@ block section_block
     .row
       .col-md-3
         figure.product_image
-          img(src='/images/presetter.png', alt="")
+          img(src='/images/STM-10-V.png', alt="", class="img-responsive")
       .col-md-9
         h2 STM-10-V(U)
         h5 特に薄型です
@@ -105,7 +108,7 @@ block section_block
     .row
       .col-md-3
         figure.product_image
-          img(src='/images/presetter.png', alt="")
+          img(src='/images/STM-05-EYC16.png', alt="", class="img-responsive")
       .col-md-9
         h2 STM-05-EYC16,25
         h5 高度な調芯性です
@@ -131,7 +134,7 @@ block section_block
     .row
       .col-md-3
         figure.product_image
-          img(src='/images/presetter.png', alt="")
+          img(src='/images/STM-10-EYC16.png', alt="", class="img-responsive img-thumbnail")
       .col-md-9
         h2 STM-10-EYC16,25,32
         h5 高度な調芯性です
