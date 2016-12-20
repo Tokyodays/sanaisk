@@ -3,19 +3,22 @@ extend _template/_sanaisk
 block header_block
   header.header
     .bg-img
+      img(src="/images/magnet_top.png", alt="")
     .topoverlay
-    a#video.player(data-property="{videoURL:'xNHY_DpDF8s',containment:'.bg-img', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, addRaster:false, quality:'default'}")
+    //- a#video.player(data-property="{videoURL:'xNHY_DpDF8s',containment:'.bg-img', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, addRaster:false, quality:'default'}")
     .title
       h1 マグネットチャック
-    button.trigger(data-info='Click')
-      span Scroll
+      h2 作業効率が大幅にアップします
+    button.trigger(data-info='Page Scroll')
+      span.mouse
+      span.scroll Page Scroll
 
 block section_block
   
   section#stationary.content
     .push
       .row
-        .col-md-6.industry.backimage.cross1
+        .col-md-6.industry.backimage.magnet1
           
         .col-md-6.industry.backwhite
           h3
@@ -28,9 +31,9 @@ block section_block
             | 小型加工物の加工に便利
           p
             | ピッチが細かいので小型の加工物を加工する上でも適しております。もちろん放電加工用に開発されているので液中加工も問題ありません。
-        .col-md-6.industry.backimage.cross2
+        .col-md-6.industry.backimage.magnet2
       .row
-        .col-md-6.industry.backimage.cross1
+        .col-md-6.industry.backimage.magnet3
           
         .col-md-6.industry.backwhite
           h3
@@ -43,7 +46,7 @@ block section_block
     .row
       .col-md-3
         figure
-          img(src='https://placehold.jp/150x150.png', alt="")
+          img(src='/images/magnet_eiji_parret.png', alt="", class="img-responsive")
       .col-md-9
         h2 据え置き型マグネットチャック
         p 形彫り放電加工機にて加工物を固定するマグネットチャックです。薄物から厚物、大きなサイズまで幅広く使える様作業面積を広くしており、厚さも40mmおよび45mmと薄くしております。またピッチが細かいので小型の加工物を加工する上でも適しております。もちろん放電加工用に開発されているので液中加工も問題ありません。サイズも様々用意しており、価格もリーズナブルに設定いたしました。放電加工機をご使用頂いているお客様にはぜひお奨めしたい商品です。
@@ -414,7 +417,7 @@ block section_block
     .row
       .col-md-3
         figure
-          img(src='https://placehold.jp/150x150.png', alt="")
+          img(src='/images/magnet_sm.png', alt="", class="img-responsive")
       .col-md-9
         h2 パレット型マグネットチャック
         p 放電加工機等に、オート・ワークパレットチェンジャーの需要が確実に拡大しておりますが、ワークパレットとしての永磁式マグネットチャックの活用度もまた確実に広がっております。
@@ -425,7 +428,7 @@ block section_block
     .row
       .col-md-3
         figure
-          img(src='https://placehold.jp/150x150.png', alt="")
+          img(src='/images/magnet_chokou.png', alt="", class="img-responsive")
       .col-md-9
         h2 据え置き型マグネットチャック
         p 超硬材を鋼材と同様に容易にキャッチング、着脱できるよう多少着磁力の最小、最大の切換え（磁力 ＯＮ．ＯＦＦ）を可能にした作業性を重視した永磁式マグネットチャックで、放電加工、研削加工に最適なツールです。
@@ -434,7 +437,7 @@ block section_block
     .row
       .col-md-3
         figure
-          img(src='https://placehold.jp/150x150.png', alt="")
+          img(src='/images/magnetic_hard.png', alt="", class="img-responsive")
       .col-md-9
         h2 据え置き型マグネットチャック
         p 超硬材を鋼材と同様に容易にキャッチング、着脱できるよう多少着磁力の最小、最大の切換え（磁力 ＯＮ．ＯＦＦ）を可能にした作業性を重視した永磁式マグネットチャックで、放電加工、研削加工に最適なツールです。
