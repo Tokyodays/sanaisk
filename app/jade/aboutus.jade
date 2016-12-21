@@ -1,17 +1,5 @@
 extend _template/_sanaisk
 
-block header_block
-  header.header
-    .bg-img
-    .topoverlay
-    a#video.player(data-property="{videoURL:'xNHY_DpDF8s',containment:'.bg-img', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, addRaster:false, quality:'default'}")
-    .title
-      figure.icon-mark
-      h1.icon-logo
-      h2 Be Your Partner
-    button.trigger(data-info='Click')
-      span Click
-
 block section_block
   .title.text-center.top_contents
     h1
@@ -27,7 +15,7 @@ block section_block
       .row
         .col-md-3
           figure
-            img(src="http://placehold.it/350x150", alt="")
+            img(src="http://placehold.it/350x150", alt="", class="img-responsive")
             figcaption
               | 社員名前
         .col-md-3
