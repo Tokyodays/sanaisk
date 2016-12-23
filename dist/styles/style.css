@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'sanaisk';
-  src:  url('fonts/sanaisk.eot?muj4lg');
-  src:  url('fonts/sanaisk.eot?muj4lg#iefix') format('embedded-opentype'),
-    url('fonts/sanaisk.ttf?muj4lg') format('truetype'),
-    url('fonts/sanaisk.woff?muj4lg') format('woff'),
-    url('fonts/sanaisk.svg?muj4lg#sanaisk') format('svg');
+  src:  url('fonts/sanaisk.eot?v765oj');
+  src:  url('fonts/sanaisk.eot?v765oj#iefix') format('embedded-opentype'),
+    url('fonts/sanaisk.ttf?v765oj') format('truetype'),
+    url('fonts/sanaisk.woff?v765oj') format('woff'),
+    url('fonts/sanaisk.svg?v765oj#sanaisk') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -481,4 +481,3 @@
 .icon-arrow-down:before {
   content: "\e097";
 }
-
