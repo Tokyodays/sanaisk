@@ -13,7 +13,7 @@
 		el.innerHTML = '<span style="font-family: \'sanaisk\'">' + entity + '</span>' + html;
 	}
 	var icons = {
-		'icon-logo_3': '&#xe939;',
+		'icon-newlogo_icon': '&#xe939;',
 		'icon-newlogo': '&#xe931;',
 		'icon-mouse': '&#xe930;',
 		'icon-crosstable': '&#xe900;',
