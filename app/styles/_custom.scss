@@ -9,6 +9,9 @@ html, body {
 	color: $color_font;
 	background-color: $color_background;
   font-family: "Noto Sans Japanese";
+  -moz-font-feature-settings: "palt";
+  -webkit-font-feature-settings: "palt";
+  font-feature-settings: "palt";
 }
 a:link,
 a:visited,
@@ -188,8 +191,11 @@ a:hover {
 			&.icon-mark:before {
 				font-size: 100px;
 			}
-      margin-bottom: 20px;
+      margin-bottom: 50px;
 			@include animation(top_figure 1.2s ease 1 1s both);
+      img.logo {
+        width: 300px;
+      }
 		}
 		h1 {
 			padding: 0 0 0.5em;
@@ -199,9 +205,14 @@ a:hover {
 				font-size: ms(1);
 			}
 			@include animation(top_h1 1.2s ease 1 1.5s both);
+      img.name {
+        width: 700px;
+      }
+
 		}
 		h2 {
 			font-size: 30px;
+      font-weight: 100;
 			margin: 0;
       line-height: 2;
 			@include animation(top_h2 1.2s ease 1 2s both);
