@@ -19,3 +19,7 @@ app.use(express.static(__dirname + '/dist'));
 app.listen(app.get('port'), function() {
   console.log('Server listening on port %s', app.get('port'));
 });
+app.get(/.svgz/, function(req, res, next) {
+  res.set({'Content-Encoding': 'gzip'});
+  next();
+});
