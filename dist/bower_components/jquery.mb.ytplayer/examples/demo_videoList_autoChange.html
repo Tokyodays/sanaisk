@@ -28,7 +28,7 @@
     <link href='http://fonts.googleapis.com/css?family=Lekton|Lobster' rel='stylesheet' type='text/css'>
     <link href="../dist/css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="../dist/jquery.mb.YTPlayer.min.js"></script>
     <script src="assets/apikey.js"></script>
 
@@ -75,8 +75,9 @@
         <p style="color:white"> video ID: <span id="videoID"></span> </p>
         <p style="color:white"> Title: <span id="videoTitle"></span> </p>
     </div>
-    <button style="color:#000000; font-size: 22px; cursor: pointer" onclick="jQuery('#myPlayerID').playPrev()">play previous</button>
-    <button style="color:#000000; font-size: 22px; cursor: pointer" onclick="jQuery('#myPlayerID').playNext()">play next</button>
+    <button style="color:#000000; font-size: 22px; cursor: pointer" onclick="jQuery('#myPlayerID').YTPPlayPrev()">play previous</button>
+    <button style="color:#000000; font-size: 22px; cursor: pointer" onclick="jQuery('#myPlayerID').YTPPlayNext()">play next</button>
+    <button style="color:#000000; font-size: 22px; cursor: pointer" onclick="jQuery('#myPlayerID').YTPPlayIndex(2)">play video n° 2</button>
 </div>
 
 <script>
@@ -96,14 +97,23 @@
                 jQuery("#videoTitle").html(video.videoData.title);
             }
         });
+
+        myPlayListPlayer.on("YTPData", function (e) {
+
+            jQuery("#videoID").html(e.prop.id);
+            jQuery("#videoTitle").html(e.prop.title);
+
+
+        });
+
     });
 
 </script>
 <a class="player" id="myPlayerID" >My video</a>
 
-<a style="position: fixed;bottom:30px;right: 30px;"
-   href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=V6ZS8JPMZC446&lc=GB&item_name=mb%2eideas&item_number=MBIDEAS&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG_global%2egif%3aNonHosted"><img
-        border="0" alt="PayPal" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG_global.gif" class="alignright"></a>
+<a style="position: fixed;bottom:40px;right: 30px;" href="http://pupunzi.open-lab.com/consider-a-donation/" target="_blank">
+  <img border="0" alt="PayPal" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG_global.gif" class="alignright">
+</a>
 
 </body>
 </html>

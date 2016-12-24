@@ -24,6 +24,7 @@
 		'icon-facebook-square': '&#xf082;',
 		'icon-linkedin-square': '&#xf08c;',
 		'icon-angle-down': '&#xf107;',
+		'icon-youtube-play': '&#xf16a;',
 		'icon-search': '&#xe036;',
 		'icon-arrow-down': '&#xe097;',
 		'0': 0

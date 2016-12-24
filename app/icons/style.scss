@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: 'sanaisk';
-  src:  url('#{$icomoon-font-path}/sanaisk.eot?muj4lg');
-  src:  url('#{$icomoon-font-path}/sanaisk.eot?muj4lg#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/sanaisk.ttf?muj4lg') format('truetype'),
-    url('#{$icomoon-font-path}/sanaisk.woff?muj4lg') format('woff'),
-    url('#{$icomoon-font-path}/sanaisk.svg?muj4lg#sanaisk') format('svg');
+  src:  url('#{$icomoon-font-path}/sanaisk.eot?85nuif');
+  src:  url('#{$icomoon-font-path}/sanaisk.eot?85nuif#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/sanaisk.ttf?85nuif') format('truetype'),
+    url('#{$icomoon-font-path}/sanaisk.woff?85nuif') format('woff'),
+    url('#{$icomoon-font-path}/sanaisk.svg?85nuif#sanaisk') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -663,6 +663,11 @@
 .icon-angle-down {
   &:before {
     content: $icon-angle-down;
+  }
+}
+.icon-youtube-play {
+  &:before {
+    content: $icon-youtube-play;
   }
 }
 .icon-search {
