@@ -211,6 +211,8 @@ $(function(){
 	$('#container').hasClass('modify') && $("#navigation").removeClass("effect");
 
 	$('#product a').matchHeight();
+
+	$('#staff div.card').matchHeight();
 /*
   $('.effect-left').onScreen({
     container: window,
