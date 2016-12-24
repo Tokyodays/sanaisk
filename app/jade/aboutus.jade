@@ -305,14 +305,17 @@ block section_block
         
         dl.dl-horizontal
           dt
-            img.title(src='http://placehold.it/350x150', alt='')
+            img.title(src='/images/okiya.png', alt='', class="img-responsive")
           dd
-            h1 準恒温室
+            h3 準恒温室
             p
               | 製品の組み立て用に準恒温室を完備。精密に製品を組み立てるのに最適です。また各種精密ゲージ、直角スコヤ、スケールも完備
   
   section#access
-    .gmap_wrapper
-      #gmap
-      script(src='http://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places&key=AIzaSyDsVuFkvi-e0QFmSUuKinzV2HQ7MvH5ZEg')
+    .iframe-content
+      iframe(src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3093.7447341657744!2d141.180279!3d39.1577872!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8f4bc82fe4fd8d%3A0x9efd0d79f6ec4a3a!2z5qCq5byP5Lya56S-44K144Oz44Ki44Kk57K-5qmf!5e0!3m2!1sja!2sus!4v1482547040847', frameborder='0', style='border:0;pointer-events: none;', allowfullscreen='')
+    
+    //- .gmap_wrapper
+    //-   #gmap
+    //-   script(src='http://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places&key=AIzaSyDsVuFkvi-e0QFmSUuKinzV2HQ7MvH5ZEg')
       
