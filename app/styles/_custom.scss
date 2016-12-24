@@ -8,7 +8,7 @@ html, body {
   padding: 0;
 	color: $color_font;
 	background-color: $color_background;
-  font-family: "Noto Sans Japanese";
+  font-family: 'Kanit', 'Noto Sans Japanese', sans-serif;
   -moz-font-feature-settings: "palt";
   -webkit-font-feature-settings: "palt";
   font-feature-settings: "palt";
@@ -536,8 +536,16 @@ h3.title {
 		}
 	}
 	p {
-		font-size: 18px;
+    font-size: ms(1);
+    font-weight: 200;
 	}
+  ul, ol {
+    margin: ms(1) auto;
+    line-height: ms(1);
+    text-align: left;
+    font-size: ms(1);
+    font-weight: 200;
+  }
 
 }
 section {
@@ -834,14 +842,18 @@ industry
 }
 .industry {
   min-height: 400px;
-  padding: 6%;
+  padding: 4%;
   h3 {
-    margin-bottom: 30px;
-    font-size: 24px;
+    margin-bottom: ms(1);
+    font-size: ms(1);
+    font-weight: 300;
+    line-height: ms(1);
   }
   p {
-    line-height: 2;
-    font-size: 16px;
+    margin-bottom: ms(0);
+    font-size: ms(0);
+    font-weight: 300;
+    line-height: ms(2);
   }
 }
 
@@ -859,10 +871,10 @@ presetter
 crosstable
 ========================================================================== */
 .cross1 {
-  background-image: url(http://www.morishige-kikai.jp/mt/img/5_MSimg4_108.JPG);
+  background-image: url(/images/cross1.png);
 }
 .cross2 {
-  background-image: url(http://blog-imgs-36.fc2.com/s/h/i/shinodayama/201003272324360cc.jpg);
+  background-image: url(/images/cross2.png);
 }
 /* ==========================================================================
 magnet
@@ -887,7 +899,7 @@ holder
     font-size: ms(1);
   }
   figure {
-    padding: 0 ms(3) ms(1);
+    padding: 0 30% ms(1);
   }
   p {
     font-size: ms(0);
