@@ -23,3 +23,34 @@ app.get(/.svgz/, function(req, res, next) {
   res.set({'Content-Encoding': 'gzip'});
   next();
 });
+
+var email   = require("emailjs/email");
+var server  = email.server.connect({
+   user:    "talkinlaud",
+   password:"bjork",
+   host:    "smtp.mail.yahoo.co.jp",
+   ssl:     true
+});
+
+app.get('/send/', function (req, res) {
+  // send the message and get a callback with an error or details of the message that was sent
+  server.send({
+     text:    "i hope this works",
+     from:    "talkinlaud@yahoo.co.jp",
+     to:      "talkinlaud@yahoo.co.jp",
+     subject: "testing emailjs"
+  }, function(err, message) {
+    // console.log(err || message);
+        var body = null;
+        if (err) {
+          body = err.toString();
+        } else {
+          body = "email sent.";
+        }
+        res.setHeader('Content-Type', 'text/plain');
+        res.setHeader('Content-Length', Buffer.byteLength(body));
+        res.end(body);
+
+  });
+
+});
