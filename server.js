@@ -33,6 +33,7 @@ var server  = email.server.connect({
 });
 
 app.get('/send/', function (req, res) {
+  var urlinfo = require('url').parse( req.url , true );
   // send the message and get a callback with an error or details of the message that was sent
   server.send({
      text:    "i hope this works",
@@ -45,7 +46,7 @@ app.get('/send/', function (req, res) {
         if (err) {
           body = err.toString();
         } else {
-          body = "email sent.";
+          body = message;
         }
         res.setHeader('Content-Type', 'text/plain');
         res.setHeader('Content-Length', Buffer.byteLength(body));

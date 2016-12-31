@@ -2,19 +2,19 @@ mixin contact
   section#contact.container
     h1.title
       | お問い合わせ
-    form.form-horizontal.col-lg-offset-2.col-lg-8.col-md-offset-2.col-md-8.col-sm-offset-1.col-sm-10.col-xs-12(role='form')
+    form#requireform.form-horizontal.col-lg-offset-2.col-lg-8.col-md-offset-2.col-md-8.col-sm-offset-1.col-sm-10.col-xs-12(role='form')
       .form-group
         label.col-xs-3.control-label(for='inputName') 名前
         .col-xs-9
-          input#inputName.form-control(type='name', placeholder='例）三愛 太郎')
+          input#inputName.form-control(type='name', name='name', placeholder='例）三愛 太郎', required)
       .form-group
         label.col-xs-3.control-label(for='inputEmail') メール
         .col-xs-9
-          input#inputEmail.form-control(type='email', placeholder='例）example@mail.com')
+          input#inputEmail.form-control(type='email', name='email' placeholder='例）example@mail.com', required)
       .form-group
         label.col-xs-3.control-label(for='inputDetail') 問い合わせ
         .col-xs-9
-          textarea#inputDetail.form-control(rows='3')
+          textarea#inputDetail.form-control(rows='3', name='detail', required)
       .form-group
         .col-xs-offset-3.col-xs-9
-          button.btn.btn-default.btn-lg(type='submit') 送信
+          button#submitbutton.btn.btn-primary.btn-lg(type='submit', disabled) 送信
