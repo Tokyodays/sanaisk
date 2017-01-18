@@ -1,6 +1,7 @@
 
 var express = require('express');
 var app = express();
+var router = app.Router();
 
 var user = process.env.USER;
 var pass = process.env.PASS;
