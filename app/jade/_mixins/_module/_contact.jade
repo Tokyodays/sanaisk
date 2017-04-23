@@ -1,13 +1,25 @@
 mixin contact
-  section#contact.container
-    iframe(
-    src='https://docs.google.com/forms/d/e/1FAIpQLScAb7-IFNmOz1LrZUhjyj4gDrZvkuxq32CK0v8nLV5nFLiZXw/viewform?embedded=true',
-      width='400',
-      height='500',
-      frameborder='0',
-      marginheight='0',
-      marginwidth='0'
-    )
+  section#contact
+    .container
+      .col-lg-offset-4.col-lg-6.col-md-offset-2.col-md-8.col-sm-offset-1.col-sm-10.col-xs-12
+        ul
+          li
+            span.glyphicon.glyphicon-envelope(aria-hidden='true')
+              a(href='sanaisk@rnac.ne.jp')
+                | sanaisk@rnac.ne.jp
+          li
+            span.glyphicon.glyphicon-phone-alt(aria-hidden='true')
+              a(href='tel:0197355518')
+                | 0197-35-5518
+    
+    //- iframe(
+    //- src='https://docs.google.com/forms/d/e/1FAIpQLScAb7-IFNmOz1LrZUhjyj4gDrZvkuxq32CK0v8nLV5nFLiZXw/viewform?embedded=true',
+    //-   width='400',
+    //-   height='500',
+    //-   frameborder='0',
+    //-   marginheight='0',
+    //-   marginwidth='0'
+    //- )
     
     //- h1.title
     //-   | お問い合わせ
