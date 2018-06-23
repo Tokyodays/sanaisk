@@ -18,6 +18,11 @@ a:visited,
 a:hover {
 	color: $color_font;
 }
+a.btn:link,
+a.btn:visited,
+a.btn:hover {
+  color: white;
+}
 #navigation {
   .sns-nav {
     li a {
@@ -953,11 +958,12 @@ holder
     line-height: ms(1);
   }
 }
-#holder label,
-#tool label,
-#clanp label {
+#holder label {
   cursor: pointer;
   text-align: center;
+}
+#holder input[type=radio][disabled] ~ span {
+  color: #999;
 }
 
 /* ==========================================================================

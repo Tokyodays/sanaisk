@@ -16,7 +16,7 @@ block section_block
             .form-group
               .radio
                   input(type="radio", name="unit", value="00", onclick="radio('unit')")
-                  | STM-00
+                  span STM-00
         .col-md-2.col-sm-3.col-xs-6
           label
             figure
@@ -24,7 +24,7 @@ block section_block
             .form-group
               .radio
                   input(type="radio", name="unit", value="05", onclick="radio('unit')")
-                  | STM-05
+                  span STM-05
         .col-md-2.col-sm-3.col-xs-6
           label
             figure
@@ -32,7 +32,7 @@ block section_block
             .form-group
               .radio
                   input(type="radio", name="unit", value="05", onclick="radio('unit')")
-                  | STM-05
+                  span STM-05
         .col-md-2.col-sm-3.col-xs-6
           label
             figure
@@ -40,7 +40,7 @@ block section_block
             .form-group
               .radio
                   input(type="radio", name="unit", value="10", onclick="radio('unit')")
-                  | STM-10
+                  span STM-10
         .col-md-2.col-sm-3.col-xs-6
           label
             figure
@@ -48,7 +48,7 @@ block section_block
             .form-group
               .radio
                   input(type="radio", name="unit", value="10", onclick="radio('unit')")
-                  | STM-10
+                  span STM-10
       
       div.triangle
         
@@ -61,7 +61,7 @@ block section_block
             .form-group
               .radio
                   input(type="radio", name="chack", value="e", onclick="radio('chack')")
-                  | EROWA
+                  span EROWA
         .col-md-2.col-md-offset-2.col-sm-6.col-xs-6
           label
             figure
@@ -69,7 +69,7 @@ block section_block
             .form-group
               .radio
                   input(type="radio", name="chack", value="r", onclick="radio('chack')")
-                  | SYSTEM 3R
+                  span SYSTEM 3R
 
       div.triangle
 
@@ -82,7 +82,7 @@ block section_block
             .form-group
               .radio
                   input(type="radio", name="folder", value="v", onclick="radio('folder')")
-                  | V字型チャック
+                  span V字型チャック
         .col-md-2.col-sm-3.col-xs-6
           label
             figure
@@ -90,52 +90,54 @@ block section_block
             .form-group
               .radio
                   input(type="radio", name="folder", value="u", onclick="radio('folder')")
-                  | U字型チャック
+                  span U字型チャック
         .col-md-2.col-sm-3.col-xs-6
           label
             figure
               img(src="/images/stmfolder8.gif", alt="eyc16", class="img-responsive")
             .form-group
               .radio
-                  input(type="radio", name="folder", value="eye16", onclick="radio('folder')")
-                  | コレット（16mm）
+                  input(type="radio", name="folder", value="eyc16", onclick="radio('folder')")
+                  span コレット（16mm）
         .col-md-2.col-sm-3.col-xs-6
           label
             figure
               img(src="/images/stmfolder9.gif", alt="eyc25", class="img-responsive")
             .form-group
               .radio
-                  input(type="radio", name="folder", value="eye25", onclick="radio('folder')")
-                  | コレット（25mm）
+                  input(type="radio", name="folder", value="eyc25", onclick="radio('folder')")
+                  span コレット（25mm）
         .col-md-2.col-sm-3.col-xs-6
           label
             figure
               img(src="/images/stmfolder10.gif", alt="eyc32", class="img-responsive")
             .form-group
               .radio
-                  input(type="radio", name="folder", value="eye32", onclick="radio('folder')")
-                  | コレット（32mm）
+                  input(type="radio", name="folder", value="eyc32", onclick="radio('folder')")
+                  span コレット（32mm）
 
       div.triangle
 
       div.row
         div.col-sm-6.col-sm-offset-3.col-xs-12
           figure
-            img(src="/images/d.gif", name='stmimg', class='img-responsive')
+            img(src="/images/d.gif", name='stmimg', class='img-responsive', style='margin:auto;')
           div.form-horizontal
             .form-group
               label.col-sm-2.control-label(for='t1') 商品番号
               .col-sm-10
-                input#t1.form-control(name='t1', type='text', placeholder='商品番号')
+                input#t1.form-control(name='t1', type='text', placeholder='')
             .form-group
               label.col-sm-2.control-label(for='t2') 標準価格
               .col-sm-10
-                input#t2.form-control(name='t2', type='text', placeholder='標準価格')
+                input#t2.form-control(name='t2', type='text', placeholder='')
 
           ul
             li STM-E(R)05、10-EYタイプの価格にはコレットは含まれて降りません（専用のスパナは付属しております）。
             li 商品番号に *1 のあるものは特別注文扱いになりますので、標準品より多少納期を要します。
             li 標準価格には、チャッキング栓(EROWA、ER-010755)又は、ドローバー(system3R 3R605,2E)が含まれております。
             li 仕様変更は無断で行われることがあります。
+          a.btn.btn-primary.btn-lg.btn-block(href='electrode_holder.html', role='button')
+            戻る
       
   script(src='scripts/radio.js')
