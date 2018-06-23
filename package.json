@@ -1,8 +1,8 @@
 {
   "name": "sanaisk",
-  "version": "0.0.0",
+  "version": "2.0.1",
   "engines": {
-    "node": "5.11.1"
+    "node": "8.10.0"
   },
   "dependencies": {
     "emailjs": "^2.1.0",
