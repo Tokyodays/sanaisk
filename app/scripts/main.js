@@ -214,6 +214,12 @@ $(function(){
 
 	$('#staff div.card').matchHeight();
 
+	$('#holder figure').matchHeight();
+
+	$('#tool figure').matchHeight();
+
+	$('#clanp figure').matchHeight();
+
 	$('#inputName, #inputEmail, #inputDetail').change(function(){
 		if($('#inputName').val().length > 0 && $('#inputEmail').val().length > 0 && $('#inputDetail').val().length > 0){
 			$('#submitbutton').prop('disabled', false);

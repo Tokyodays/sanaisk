@@ -953,6 +953,12 @@ holder
     line-height: ms(1);
   }
 }
+#holder label,
+#tool label,
+#clanp label {
+  cursor: pointer;
+  text-align: center;
+}
 
 /* ==========================================================================
 aboutus
