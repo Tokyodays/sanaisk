@@ -68,7 +68,17 @@ gulp.task('clean', function () {
     return gulp.src(['dist/*'], { read: false }).pipe($.clean());
 });
 
-gulp.task('build', gulpSequence('clean', 'bowercopy', 'jade', 'images', ['icomoon', 'icostyle'], 'styles', 'scripts'));
+gulp.task('copy', function () {
+  return gulp.src('.htaccess')
+    .pipe(gulp.dest('./dist'));
+});
+
+gulp.task('redirectcopy', function () {
+  return gulp.src('app/redirect/index.html')
+    .pipe(gulp.dest('./dist/~sanaisk/html/jp/'));
+});
+
+gulp.task('build', gulpSequence('clean', 'bowercopy', 'jade', 'images', ['icomoon', 'icostyle'], 'styles', 'scripts', 'copy', 'redirectcopy'));
 
 gulp.task('default', ['watch'], function () {
   gulp.start('build');
