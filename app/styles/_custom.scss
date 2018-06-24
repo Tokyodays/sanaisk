@@ -1020,6 +1020,20 @@ holder
 #holder input[type=radio][disabled] ~ span {
   color: #999;
 }
+#thesis {
+  h2.title {
+    margin: ms(2) 0 ms(1)
+  }
+  h3.title,
+  h4.title {
+    margin: ms(2) 0 ms(1);
+  }
+  p{
+    text-indent: 1em;
+    font-size: ms(0)*1.25;
+    line-height: ms(1);
+  }
+}
 
 /* ==========================================================================
 aboutus
