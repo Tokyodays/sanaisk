@@ -1,0 +1,19 @@
+//- ogp をページごとに変えたい場合に使う。
+mixin ogp(ogpData)
+  // ogp tags
+  meta(property="og:title", content="#{ogpData.title}")
+  //- トップページはwebsite、個別ページはarticle
+  meta(property="og:type", content="article")
+  //- 記事の説明
+  meta(property="og:description", content="#{ogpData.description}")
+  //- 記事の URL
+  meta(property="og:url", content="#{ogpData.url}")
+  //- 記事用の画像
+  meta(property="og:image", content="#{ogpData.image}")
+  //- サイト名
+  meta(property="og:site_name", content="#{ogpData.siteName}")
+  //- 言語
+  meta(property="og:locale", content="#{ogp.lang}")
+  //- できればfb:app_idを利用
+  meta(property="fb:admins", content="#{ogpData.fbid}")
+  meta(property="fb:app_id", content="#{ogpData.fbid}")
