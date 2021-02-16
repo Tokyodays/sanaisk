@@ -8,7 +8,7 @@ block header_block
     //- a#video.player(data-property="{videoURL:'xNHY_DpDF8s',containment:'.bg-img', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, addRaster:false, quality:'default'}")
     .title
       h1.text クロステーブル
-      h2 X,Yの位置決めをよりスピーディーに、正確に。さらに廉価版で。
+      h2 世界で唯一、加工機に乗せられるクロステーブル
     button.trigger(data-info='Page Scroll')
       span.mouse
       span.scroll Page Scroll
@@ -21,9 +21,17 @@ block section_block
           
         .col-md-6.industry.backwhite
           h3
-            | 安くて使いやすい
+            | 知ってましたか？
           p
-            | 低廉でシンプルな軽量薄型構造ながら、高い精度と適正な剛性を有し、有力工業機械メーカー様の標準テーブルとしてもご採用いただき、ご好評をいただいております。
+            | 高剛性で、低価格、高性能なクロステーブルは世界中でもうどこでも作っていません。
+          ul
+            li
+              廉価で軽量薄型構造ながら、高い精度と適正な剛性
+            li
+              ボール盤や小型フライス盤、各種自動機、専用テーブル等に最適
+            li
+              有名工作機メーカーなどにも採択されております
+
       .row
         .col-md-6.industry.backwhite
           h3
@@ -33,88 +41,56 @@ block section_block
         .col-md-6.industry.backimage.cross2
 
   section#product.container
-    .row
+    .row.a-mb60
       .col-md-3
+        .area
+          h2 SCT-2301
+      .col-md-9
         figure.product_image
           img(src='/images/cross.png', alt="", class="img-responsive")
-      .col-md-9
-        .area
-          h2 SCT-2300
-          p 形彫り放電加工機にて加工物を固定するマグネットチャックです。薄物から厚物、大きなサイズまで幅広く使える様作業面積を広くしており、厚さも40mmおよび45mmと薄くしております。またピッチが細かいので小型の加工物を加工する上でも適しております。もちろん放電加工用に開発されているので液中加工も問題ありません。サイズも様々用意しており、価格もリーズナブルに設定いたしました。放電加工機をご使用頂いているお客様にはぜひお奨めしたい商品です。
+    .row 
+      .col-md-6.offset-md-3
+        figure.product_image
+          img(src='/images/drafting_sct-2301.png', alt="", class="img-responsive")
 
     h2.title 
-     | 標準仕様
+     | 仕様
      span.subtitle
        | (mm)
     .row
-      .col-lg-4.col-md-4.col-sm-4.col-xs-12
+      .col-xs-12
         table.table.table_design
           tbody
             tr
               th テーブル寸法
               td 350×250
             tr
-              th テーブル面高さ
-              td 175
+              th 本体寸法
+              td 
+                | x626(ハンドル部246mm)
+                br
+                | y616(ハンドル部216mm)
+                br
+                | t175
             tr
               th テーブルストローク
               td 
-                | 前後 : 200
+                | x300
                 br
-                | 左右 : 300
-            tr
-              th T溝巾
-              td 10
-            tr
-              th T溝のピッチ
-              td 50・80・50
-      .col-lg-4.col-md-4.col-sm-4.col-xs-12
-        table.table.table_design
-          tbody
-            tr
-              th 取付スペース
-              td 
-                | 前後 : 535
-                br
-                | 左右 : 635
-                br
-                | 高さ : 175
-            tr
-              th リードネジ仕様
-              td
-                | ネジ径 : &Phi;18
-                br
-                | ピッチ : 4
-                br
-                | 種類 : 30&deg;台形
-      .col-lg-4.col-md-4.col-sm-4.col-xs-12
-        table.table.table_design
-          tbody
-            tr
-              th 最小目盛
-              td 0.025
-            tr
-              th 潤滑油供給方式
-              td 自然
-            tr
-              th 材質
-              td F C=25
-            tr
-              th 重量
-              td 80kg
+                | y200
     h2.title 
-      | 標準仕様時の精度
+      | 標準仕様
       span.subtitle
         | (mm)
     .row
-      .col-xs-12
+      .col-xs-6
         table.table.table_design
           tbody
             tr
               th テーブル平面行度
               td 300/0.02
             tr
-              th T溝平行度
+              th 走り平行度
               td 300/0.02
             tr
               th X,Y軸直角度
@@ -125,6 +101,29 @@ block section_block
             tr
               th 繰り返し精度
               td 0.02
+      .col-xs-6 
+        table.table.table_design
+          tbody
+            tr
+              th T溝巾
+              td 10
+            tr
+              th T溝のピッチ
+              td 
+                | 50 x 80 x 50 
+                br
+                | 80 x 80 x 80
+
+            tr
+              th リードネジ系
+              td &Phi;18
+            tr
+              th リードネジピッチ
+              td 4
+            tr
+              th リードネジ種類
+              td 30°台形
+
     h5.title 特別仕様
     p
       | 制御モーター取付仕様、ボールネジ仕様、高精度(静的精度の向上)、仕様等のご相談にも応じております。
@@ -134,94 +133,57 @@ block section_block
       br
       | オイルパンの付加(標準品を用意しておりますが、特別仕様のご相談にも応じております)。
 
-    .row
+    .row.a-mt80.a-mb60
       .col-md-3
-        figure.product_image
-          img(src='/images/cross_sct-3400.png', alt="", class="img-responsive")
-      .col-md-9
         .area
           h2 SCT-3400
-          ul
-            li
-              廉価で軽量薄型構造ながら、高い精度と適正な剛性
-            li
-              ボール盤や小型フライス盤、各種自動機、専用テーブル等に最適
-            li
-              有名工作機メーカーなどにも採択されております
+      .col-md-9
+        figure.product_image
+          img(src='/images/cross_sct-3400.png', alt="", class="img-responsive")
+    .row 
+      .col-md-6.offset-md-3
+        figure.product_image
+          img(src='/images/drafting_sct-3400.png', alt="", class="img-responsive")
 
     h2.title 
-     | 標準仕様
+     | 仕様
      span.subtitle
        | (mm)
     .row
-      .col-lg-4.col-md-4.col-sm-4.col-xs-12
+      .col-xs-12
         table.table.table_design
           tbody
             tr
               th テーブル寸法
-              td 350×250
+              td 450×350
             tr
-              th テーブル面高さ
-              td 175
+              th 本体寸法
+              td 
+                | x771(ハンドル部291mm)
+                br
+                | y671(ハンドル部291mm)
+                br
+                | t175
             tr
               th テーブルストローク
               td 
-                | 前後 : 200
+                | x400
                 br
-                | 左右 : 300
-            tr
-              th T溝巾
-              td 10
-            tr
-              th T溝のピッチ
-              td 50・80・50
-      .col-lg-4.col-md-4.col-sm-4.col-xs-12
-        table.table.table_design
-          tbody
-            tr
-              th 取付スペース
-              td 
-                | 前後 : 535
-                br
-                | 左右 : 635
-                br
-                | 高さ : 175
-            tr
-              th リードネジ仕様
-              td
-                | ネジ径 : &Phi;18
-                br
-                | ピッチ : 4
-                br
-                | 種類 : 30&deg;台形
-      .col-lg-4.col-md-4.col-sm-4.col-xs-12
-        table.table.table_design
-          tbody
-            tr
-              th 最小目盛
-              td 0.025
-            tr
-              th 潤滑油供給方式
-              td 自然
-            tr
-              th 材質
-              td F C=25
-            tr
-              th 重量
-              td 80kg
+                | y300
+
     h2.title 
-      | 標準仕様時の精度
+      | 標準仕様
       span.subtitle
         | (mm)
     .row
-      .col-xs-12
+      .col-xs-6
         table.table.table_design
           tbody
             tr
               th テーブル平面行度
               td 300/0.02
             tr
-              th T溝平行度
+              th 走り平行度
               td 300/0.02
             tr
               th X,Y軸直角度
@@ -232,6 +194,29 @@ block section_block
             tr
               th 繰り返し精度
               td 0.02
+      .col-xs-6 
+        table.table.table_design
+          tbody
+            tr
+              th T溝巾
+              td 10
+            tr
+              th T溝のピッチ
+              td 
+                | 50 x 80 x 50 
+                br
+                | 80 x 80 x 80
+
+            tr
+              th リードネジ系
+              td &Phi;18
+            tr
+              th リードネジピッチ
+              td 4
+            tr
+              th リードネジ種類
+              td 30°台形
+
     h5.title 特別仕様
     p
       | 制御モーター取付仕様、ボールネジ仕様、高精度(静的精度の向上)、仕様等のご相談にも応じております。
