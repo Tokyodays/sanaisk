@@ -2,7 +2,7 @@
   "name": "sanaisk",
   "version": "2.0.1",
   "engines": {
-    "node": "8.10.0"
+    "node": "10.16.3"
   },
   "dependencies": {
     "basic-auth-connect": "^1.0.0",
