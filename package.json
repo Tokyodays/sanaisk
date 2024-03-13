@@ -16,7 +16,7 @@
     "sitemap": "^1.13.0"
   },
   "devDependencies": {
-    "browser-sync": "^2.24.4",
+    "browser-sync": "^3.0.2",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-bower-files": "*",
