@@ -5,7 +5,6 @@ var gulp = require('gulp');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var gutil = require('gulp-util');
-var gulpSequence = require('gulp-sequence');
 
 // load plugins
 var $ = require('gulp-load-plugins')();
@@ -78,13 +77,26 @@ gulp.task('redirectcopy', function () {
     .pipe(gulp.dest('./dist/~sanaisk/html/jp/'));
 });
 
-gulp.task('build', gulpSequence('clean', 'bowercopy', 'jade', 'images', ['icomoon', 'icostyle'], 'styles', 'scripts', 'copy', 'redirectcopy'));
+gulp.task('build', gulp.series(
+    'clean',
+    'bowercopy',
+    'jade',
+    'images',
+    gulp.parallel(
+      'icomoon',
+      'icostyle'
+    ),
+    'styles',
+    'scripts',
+    'copy',
+    'redirectcopy'
+  ));
 
-gulp.task('default', ['watch'], function () {
+gulp.task('default', gulp.task('watch'), function () {
   gulp.start('build');
 });
 
-gulp.task('serve', ['build'], function () {
+gulp.task('serve', gulp.task('build'), function () {
     browserSync.init(null, {
         server: {
           baseDir: 'dist',
@@ -121,14 +133,14 @@ gulp.task('wiredep', function () {
         .pipe(gulp.dest('app'));
 });
 
-gulp.task('watch', ['serve'], function () {
+gulp.task('watch', gulp.task('serve'), function () {
 
     //watch for changes
     gulp.watch(['app/*.html'], reload);
 
-    gulp.watch('app/jade/**/*.jade', ['jade']);
-    gulp.watch('app/styles/**/*.scss', ['styles']);
-    gulp.watch('app/scripts/**/*.js', ['scripts']);
-    gulp.watch('app/images/**/*', ['images']);
-    gulp.watch('bower.json', ['wiredep']);
+    gulp.watch('app/jade/**/*.jade', gulp.task('jade'));
+    gulp.watch('app/styles/**/*.scss', gulp.task('styles'));
+    gulp.watch('app/scripts/**/*.js', gulp.task('scripts'));
+    gulp.watch('app/images/**/*', gulp.task('images'));
+    gulp.watch('bower.json', gulp.task('wiredep'));
 });
