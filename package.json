@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "browser-sync": "^2.29.1",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-bower-files": "*",
     "gulp-cache": "^1.0.2",
