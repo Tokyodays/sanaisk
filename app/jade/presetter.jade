@@ -14,6 +14,9 @@ block header_block
       span.scroll Page Scroll
 
 block section_block
+  section#youtube.content 
+    +youtube("442xEyyXCVE", "0", "undefined", "96vmin", "72vmin")
+
   section#crosstable.content
     .push
       .row
@@ -42,7 +45,10 @@ block section_block
           h2 SEP-02A
           p 放電加工機等の電極、又はワークを、現状より更に高精度なプリセットを望まれているユーザーのために、新たに開発された新製品で、EROWA/system 3R両社のシステムに対応します。
           p 稼働率向上と、より高精度な加工に最適なツールです。
-
+          p 
+            a.btn.btn-primary.btn-lg(href='/images/pdf/presetter.pdf', role ='button', target='_blank') 
+              i(data-feather='file-text')
+              | 電極、ワークプリセッターのカタログ
     table.table.table_design
       thead
         tr

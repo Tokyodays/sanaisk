@@ -1128,3 +1128,18 @@ onscreen
     @include opacity(1);
   }
 }
+
+/* ==========================================================================
+youtube
+========================================================================== */
+
+.youtube-container{position:relative;width:100%;width:auto;margin:1em auto;text-align: center;}
+.youtube-container::after{
+	width: 0;
+	height: 0;
+	display:block;left:50%;top:48.48%;z-index:8;content:'';position:absolute;
+}
+.youtube-container iframe {
+	aspect-ratio: 16 / 9;
+  width: 100%;
+}
