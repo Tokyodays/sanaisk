@@ -68,7 +68,7 @@ gulp.task('clean', function () {
 });
 
 gulp.task('copy', function () {
-  return gulp.src('.htaccess')
+  return gulp.src('app/root/*')
     .pipe(gulp.dest('./dist'));
 });
 
